@@ -1,6 +1,6 @@
 # Pre-registration — Sting Audits (Apart AI Collusion Research Sprint, Oct 2026)
 
-Committed at: 2026-10-25 17:39 IST / 2026-10-25 12:09 UTC   Commit hash: <FILL AFTER COMMIT>   Author: Arpit (LSUDOKO), Independent
+Committed at: 2026-10-25 17:39 IST / 2026-10-25 12:09 UTC   Commit hash: 624c534 (this line added in the following commit; the frozen sections above are unchanged)   Author: Arpit (LSUDOKO), Independent
 Status at commit time: Phase A1 probe running (480 trials, seed 7; 4 clear judge fixtures correct; probe pilot done); Phase A2/B/C games **not yet run**
 (a pilot game with seed 999 was run only to test code; it is excluded from all analyses).
 
