@@ -6,7 +6,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 LB_DIR = REPO / "collusion_hackathon" / "llm-agent-collusion-2" / "Collusion_Liars_Bar"
-RESULTS = REPO / "results"
+RESULTS = Path(os.environ["STING_RESULTS_DIR"]) if os.environ.get("STING_RESULTS_DIR") else REPO / "results"  # env override for dry runs
 PROMPTS = REPO / "prompts"
 RAW = RESULTS / "raw"
 TABLES = RESULTS / "tables"

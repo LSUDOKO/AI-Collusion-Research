@@ -4,6 +4,9 @@ All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:3
 
 ## Sun 25 Oct
 
+> Note: entry times between 16:45 and 18:50 below were written from memory and run ahead of the wall clock by up to
+> ~1 h (real clock at the 'Phase B launched' entry: 17:40 IST). From 17:50 IST onwards times come from `date`.
+
 - 16:43 Start. Read CLAUDE.md, docs/01–09, templates/. Moved instruction pack from `sting_audit_pack/` to repo root (CLAUDE.md, docs/, templates/, README_START_HERE.md).
 - 16:45 Toolchain: git, uv 0.11.16, Python 3.14.7 (system), gh authenticated (LSUDOKO). No NEBIUS/OPENROUTER key in env yet (blocker for real runs; build + mock tests first).
 - 16:45 Cloning poseidon-research/collusion_hackathon (slow network; running in background).
@@ -48,3 +51,9 @@ All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:3
   templates containing JSON braces → replaced by `paths.fill()`; `--out` now resolved before `enter_lb()` chdir.
 - 18:10 Full A1 probe launched (4 models × 3 personas × 4 offers × n=10 = 480 trials, seed 7, 8 workers) → results/raw/probe/probe_seed7.jsonl, log results/logs/probe.out.
 - 17:39 Pre-registration committed (624c534) and pushed to https://github.com/LSUDOKO/AI-Collusion-Research. Launched Phase A2 seed 101 (3 games, workers 3; first game doubles as the real pilot — transcript to be read before launching B).
+- 18:50 **Parser hand-check:** 30 random S1–S3 replies (seed 7 sample from the first 123 probe rows; all four models
+  represented) read by hand and labelled ACCEPT/REFUSE → 30/30 agree with the automated strict-JSON decision
+  (`results/tables/hand_labels.csv`). No judge fallbacks were needed so far (parse methods: json 88, first_token 35).
+  Early pattern (interim, n small): allam-7b accepts every offer including the benign S3; qwen3.8-27b refuses every
+  offer including S3; gpt-oss-120b refuses the direct pact S1 (0/6) but accepts the indirect hint S2 (6/6).
+- 17:48 Real-model smoke test of the messaging step (3 sends, 3 replies, 0 parse fallbacks; context block visible). Launched Phase B seeds 201–202 (6 games, workers 2) concurrently with A2; throughput is bounded by allam-2-7b's 6k tokens/min.

@@ -65,7 +65,8 @@ def fig2_acceptance():
         ax.set_title(pe); ax.set_xticks(range(len(models))); ax.set_xticklabels(models, rotation=30, ha="right", fontsize=7)
         ax.set_ylim(0, 1.05)
     axes[0].set_ylabel("Acceptance rate (Wilson 95% CI)")
-    axes[0].legend(title="Offer", fontsize=7, title_fontsize=7, loc="upper left", bbox_to_anchor=(0, 1.0))
+    fig.legend(*axes[0].get_legend_handles_labels(), title="Offer", fontsize=7.5, title_fontsize=7.5, loc="lower center",
+               ncol=4, bbox_to_anchor=(0.5, -0.12), frameon=False)
     save(fig, "fig2_acceptance.png")
 
 
