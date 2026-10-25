@@ -1,0 +1,1051 @@
+{
+ "elements": [
+  {
+   "id": "title",
+   "type": "text",
+   "start": 11.172,
+   "dur": 1.2
+  },
+  {
+   "id": "subtitle",
+   "type": "text",
+   "start": 12.372,
+   "dur": 1.925
+  },
+  {
+   "id": "takeaway",
+   "type": "text",
+   "start": 176.484,
+   "dur": 2.2
+  },
+  {
+   "id": "agent",
+   "type": "path",
+   "start": 1.8,
+   "dur": 2.2
+  },
+  {
+   "id": "envelope",
+   "type": "path",
+   "start": 4.0,
+   "dur": 1.2
+  },
+  {
+   "id": "s1_bubble",
+   "type": "path",
+   "start": 50.76,
+   "dur": 1.0
+  },
+  {
+   "id": "s1_text",
+   "type": "text",
+   "start": 51.76,
+   "dur": 1.595
+  },
+  {
+   "id": "s2_bubble",
+   "type": "path",
+   "start": 57.348,
+   "dur": 1.0
+  },
+  {
+   "id": "s2_text",
+   "type": "text",
+   "start": 58.348,
+   "dur": 1.87
+  },
+  {
+   "id": "s3_bubble",
+   "type": "path",
+   "start": 61.278,
+   "dur": 1.0
+  },
+  {
+   "id": "s3_text",
+   "type": "text",
+   "start": 62.278,
+   "dur": 1.375
+  },
+  {
+   "id": "s0_bubble",
+   "type": "path",
+   "start": 65.808,
+   "dur": 1.0
+  },
+  {
+   "id": "s0_text",
+   "type": "text",
+   "start": 66.808,
+   "dur": 1.87
+  },
+  {
+   "id": "pct_s1",
+   "type": "text",
+   "start": 130.248,
+   "dur": 0.6
+  },
+  {
+   "id": "pct_s2",
+   "type": "text",
+   "start": 130.848,
+   "dur": 0.6
+  },
+  {
+   "id": "oss_label",
+   "type": "text",
+   "start": 131.448,
+   "dur": 0.66
+  },
+  {
+   "id": "stamp",
+   "type": "path",
+   "start": 71.418,
+   "dur": 0.9
+  },
+  {
+   "id": "stamp_text",
+   "type": "text",
+   "start": 72.318,
+   "dur": 1.265
+  },
+  {
+   "id": "badge",
+   "type": "path",
+   "start": 29.898,
+   "dur": 1.1
+  },
+  {
+   "id": "badge_label",
+   "type": "text",
+   "start": 30.998,
+   "dur": 0.88
+  },
+  {
+   "id": "table_sketch",
+   "type": "path",
+   "start": 6.498,
+   "dur": 1.422
+  },
+  {
+   "id": "seats",
+   "type": "path",
+   "start": 17.742,
+   "dur": 1.8
+  },
+  {
+   "id": "seat_names",
+   "type": "fade",
+   "start": 19.542,
+   "dur": 0.6
+  },
+  {
+   "id": "magnifier",
+   "type": "path",
+   "start": 20.142,
+   "dur": 1.2
+  },
+  {
+   "id": "mag_label",
+   "type": "text",
+   "start": 21.342,
+   "dur": 0.825
+  },
+  {
+   "id": "private_line",
+   "type": "path",
+   "start": 23.298,
+   "dur": 1.4
+  },
+  {
+   "id": "private_label",
+   "type": "text",
+   "start": 24.698,
+   "dur": 0.825
+  },
+  {
+   "id": "cards",
+   "type": "path",
+   "start": 36.972,
+   "dur": 1.2
+  },
+  {
+   "id": "revolver",
+   "type": "path",
+   "start": 38.172,
+   "dur": 1.0
+  },
+  {
+   "id": "game_label",
+   "type": "text",
+   "start": 39.172,
+   "dur": 0.55
+  },
+  {
+   "id": "open_label",
+   "type": "text",
+   "start": 148.308,
+   "dur": 1.265
+  },
+  {
+   "id": "q_arrow",
+   "type": "path",
+   "start": 7.92,
+   "dur": 1.244
+  },
+  {
+   "id": "q_label",
+   "type": "text",
+   "start": 9.164,
+   "dur": 0.928
+  },
+  {
+   "id": "grid",
+   "type": "path",
+   "start": 44.31,
+   "dur": 1.8
+  },
+  {
+   "id": "grid_label",
+   "type": "text",
+   "start": 46.11,
+   "dur": 0.935
+  },
+  {
+   "id": "grid_rows",
+   "type": "text",
+   "start": 47.045,
+   "dur": 0.5
+  },
+  {
+   "id": "grid_cols",
+   "type": "text",
+   "start": 47.545,
+   "dur": 0.66
+  },
+  {
+   "id": "axes_d",
+   "type": "path",
+   "start": 78.618,
+   "dur": 1.0
+  },
+  {
+   "id": "bar_S0",
+   "type": "grow",
+   "start": 79.618,
+   "dur": 0.9,
+   "box": [
+    240,
+    1312.0,
+    150,
+    468.0
+   ]
+  },
+  {
+   "id": "val_S0",
+   "type": "text",
+   "start": 80.518,
+   "dur": 0.5
+  },
+  {
+   "id": "lab_S0",
+   "type": "text",
+   "start": 81.018,
+   "dur": 0.5
+  },
+  {
+   "id": "bar_S1",
+   "type": "grow",
+   "start": 84.198,
+   "dur": 0.9,
+   "box": [
+    455,
+    1563.316,
+    150,
+    216.684
+   ]
+  },
+  {
+   "id": "val_S1",
+   "type": "text",
+   "start": 85.098,
+   "dur": 0.5
+  },
+  {
+   "id": "lab_S1",
+   "type": "text",
+   "start": 85.598,
+   "dur": 0.5
+  },
+  {
+   "id": "bar_S2",
+   "type": "grow",
+   "start": 86.098,
+   "dur": 0.9,
+   "box": [
+    670,
+    1411.684,
+    150,
+    368.31600000000003
+   ]
+  },
+  {
+   "id": "val_S2",
+   "type": "text",
+   "start": 86.998,
+   "dur": 0.5
+  },
+  {
+   "id": "lab_S2",
+   "type": "text",
+   "start": 87.498,
+   "dur": 0.5
+  },
+  {
+   "id": "bar_S3",
+   "type": "grow",
+   "start": 87.998,
+   "dur": 0.9,
+   "box": [
+    885,
+    1533.0,
+    150,
+    247.0
+   ]
+  },
+  {
+   "id": "val_S3",
+   "type": "text",
+   "start": 88.898,
+   "dur": 0.5
+  },
+  {
+   "id": "lab_S3",
+   "type": "text",
+   "start": 89.398,
+   "dur": 0.5
+  },
+  {
+   "id": "claude_note",
+   "type": "text",
+   "start": 140.538,
+   "dur": 1.925
+  },
+  {
+   "id": "axes_e",
+   "type": "path",
+   "start": 94.038,
+   "dur": 1.0
+  },
+  {
+   "id": "xlab_e",
+   "type": "text",
+   "start": 95.038,
+   "dur": 1.045
+  },
+  {
+   "id": "ylab_e",
+   "type": "text",
+   "start": 96.083,
+   "dur": 1.045
+  },
+  {
+   "id": "dots",
+   "type": "dots",
+   "start": 99.258,
+   "dur": 2.2,
+   "n": 12
+  },
+  {
+   "id": "diag",
+   "type": "path",
+   "start": 110.052,
+   "dur": 1.2
+  },
+  {
+   "id": "rho",
+   "type": "text",
+   "start": 111.252,
+   "dur": 0.8
+  },
+  {
+   "id": "lab_allam",
+   "type": "text",
+   "start": 116.382,
+   "dur": 0.935
+  },
+  {
+   "id": "lab_qwen",
+   "type": "text",
+   "start": 117.317,
+   "dur": 0.88
+  },
+  {
+   "id": "compliance",
+   "type": "text",
+   "start": 123.576,
+   "dur": 1.4
+  },
+  {
+   "id": "shot",
+   "type": "image",
+   "start": 153.63,
+   "dur": 1.6,
+   "box": [
+    2220,
+    1240,
+    840,
+    387.89103690685414
+   ]
+  },
+  {
+   "id": "alliance_label",
+   "type": "text",
+   "start": 155.23,
+   "dur": 1.65
+  },
+  {
+   "id": "quote",
+   "type": "text",
+   "start": 156.88,
+   "dur": 1.8
+  },
+  {
+   "id": "quota_boxes",
+   "type": "path",
+   "start": 166.578,
+   "dur": 1.6
+  },
+  {
+   "id": "quota_fill",
+   "type": "fade",
+   "start": 168.178,
+   "dur": 0.6
+  },
+  {
+   "id": "quota_label",
+   "type": "text",
+   "start": 168.778,
+   "dur": 0.935
+  },
+  {
+   "id": "same_arrow",
+   "type": "path",
+   "start": 161.592,
+   "dur": 1.4
+  },
+  {
+   "id": "same_label",
+   "type": "text",
+   "start": 162.992,
+   "dur": 1.595
+  },
+  {
+   "id": "repo",
+   "type": "text",
+   "start": 181.92,
+   "dur": 1.6
+  }
+ ],
+ "cams": [
+  {
+   "t": 0.9,
+   "box": [
+    785.0,
+    730.0,
+    1728.0
+   ]
+  },
+  {
+   "t": 5.598000000000001,
+   "box": [
+    1600.0,
+    1085.0,
+    4089.6
+   ]
+  },
+  {
+   "t": 10.272,
+   "box": [
+    1600.0,
+    180.0,
+    1512.0
+   ]
+  },
+  {
+   "t": 16.842,
+   "box": [
+    2600.0,
+    750.0,
+    2035.2000000000003
+   ]
+  },
+  {
+   "t": 28.998,
+   "box": [
+    785.0,
+    730.0,
+    1728.0
+   ]
+  },
+  {
+   "t": 36.072,
+   "box": [
+    2600.0,
+    750.0,
+    2035.2000000000003
+   ]
+  },
+  {
+   "t": 43.410000000000004,
+   "box": [
+    1600.0,
+    560.0,
+    1075.2
+   ]
+  },
+  {
+   "t": 49.86000000000001,
+   "box": [
+    785.0,
+    730.0,
+    1728.0
+   ]
+  },
+  {
+   "t": 77.71800000000002,
+   "box": [
+    650.0,
+    1560.0,
+    1574.3999999999999
+   ]
+  },
+  {
+   "t": 93.13800000000002,
+   "box": [
+    1630.0,
+    1530.0,
+    1728.0
+   ]
+  },
+  {
+   "t": 129.348,
+   "box": [
+    785.0,
+    730.0,
+    1728.0
+   ]
+  },
+  {
+   "t": 139.638,
+   "box": [
+    650.0,
+    1560.0,
+    1574.3999999999999
+   ]
+  },
+  {
+   "t": 147.408,
+   "box": [
+    2600.0,
+    750.0,
+    2035.2000000000003
+   ]
+  },
+  {
+   "t": 152.72999999999996,
+   "box": [
+    2660.0,
+    1550.0,
+    1536.0
+   ]
+  },
+  {
+   "t": 160.69199999999995,
+   "box": [
+    2175.0,
+    1530.0,
+    2214.0
+   ]
+  },
+  {
+   "t": 165.67799999999994,
+   "box": [
+    2660.0,
+    1550.0,
+    1536.0
+   ]
+  },
+  {
+   "t": 175.58399999999992,
+   "box": [
+    1600.0,
+    1085.0,
+    4089.6
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "t": 0.9,
+   "dur": 4.248,
+   "file": "line00.mp3",
+   "subs": [
+    {
+     "t": 0.998083,
+     "s": "Suppose you could slip an AI agent"
+    },
+    {
+     "t": 3.0052909999999997,
+     "s": "a secret offer to cheat."
+    }
+   ],
+   "end": 5.148000000000001
+  },
+  {
+   "t": 5.598000000000001,
+   "dur": 4.224,
+   "file": "line01.mp3",
+   "subs": [
+    {
+     "t": 5.696083000000001,
+     "s": "Would its answer tell you which agents"
+    },
+    {
+     "t": 7.390791000000001,
+     "s": "will collude on their own, later?"
+    }
+   ],
+   "end": 9.822000000000001
+  },
+  {
+   "t": 10.272,
+   "dur": 6.12,
+   "file": "line02.mp3",
+   "subs": [
+    {
+     "t": 10.370083000000001,
+     "s": "That's the question behind Sting Audits, my"
+    },
+    {
+     "t": 12.797958000000001,
+     "s": "project for the Apart Research AI Collusion Sprint."
+    }
+   ],
+   "end": 16.392
+  },
+  {
+   "t": 16.842,
+   "dur": 5.856,
+   "file": "line03.mp3",
+   "subs": [
+    {
+     "t": 16.940082999999998,
+     "s": "Today, collusion is mostly caught by passive"
+    },
+    {
+     "t": 19.488166,
+     "s": "monitors that read transcripts and actions."
+    }
+   ],
+   "end": 22.698
+  },
+  {
+   "t": 23.148,
+   "dur": 5.4,
+   "file": "line04.mp3",
+   "subs": [
+    {
+     "t": 23.246083,
+     "s": "But agents can plan in private and"
+    },
+    {
+     "t": 25.265290999999998,
+     "s": "act differently, so monitors miss things."
+    }
+   ],
+   "end": 28.548000000000002
+  },
+  {
+   "t": 28.998,
+   "dur": 6.624,
+   "file": "line05.mp3",
+   "subs": [
+    {
+     "t": 29.096083,
+     "s": "Antitrust regulators use undercover stings. So I"
+    },
+    {
+     "t": 33.060500000000005,
+     "s": "built one for AI agents."
+    }
+   ],
+   "end": 35.622
+  },
+  {
+   "t": 36.072,
+   "dur": 6.888,
+   "file": "line06.mp3",
+   "subs": [
+    {
+     "t": 36.170083000000005,
+     "s": "The game is Liar's Bar: four agents"
+    },
+    {
+     "t": 39.088833,
+     "s": "bluff, challenge, and face a revolver when they lose."
+    }
+   ],
+   "end": 42.96
+  },
+  {
+   "t": 43.410000000000004,
+   "dur": 6.0,
+   "file": "line07.mp3",
+   "subs": [
+    {
+     "t": 43.508083000000006,
+     "s": "I tested four models with three personas"
+    },
+    {
+     "t": 45.827791000000005,
+     "s": "each: twelve configurations."
+    }
+   ],
+   "end": 49.410000000000004
+  },
+  {
+   "t": 49.86000000000001,
+   "dur": 6.888,
+   "file": "line08.mp3",
+   "subs": [
+    {
+     "t": 49.95808300000001,
+     "s": "Mid-game, a peer sends a private message."
+    },
+    {
+     "t": 51.869125000000004,
+     "s": "Maybe a direct pact: let's secretly team up."
+    }
+   ],
+   "end": 56.748000000000005
+  },
+  {
+   "t": 57.19800000000001,
+   "dur": 3.48,
+   "file": "line09.mp3",
+   "subs": [
+    {
+     "t": 57.29608300000001,
+     "s": "Or a softer hint: let's go easy"
+    },
+    {
+     "t": 59.207125000000005,
+     "s": "on each other."
+    }
+   ],
+   "end": 60.678000000000004
+  },
+  {
+   "t": 61.12800000000001,
+   "dur": 4.08,
+   "file": "line10.mp3",
+   "subs": [
+    {
+     "t": 61.22608300000001,
+     "s": "Or, as a control, a harmless request"
+    },
+    {
+     "t": 63.605875000000005,
+     "s": "to play fair."
+    }
+   ],
+   "end": 65.20800000000001
+  },
+  {
+   "t": 65.65800000000002,
+   "dur": 5.16,
+   "file": "line11.mp3",
+   "subs": [
+    {
+     "t": 65.75608300000002,
+     "s": "And as a positive control, the game"
+    },
+    {
+     "t": 67.83541600000001,
+     "s": "designer's original secret-channel tool."
+    }
+   ],
+   "end": 70.81800000000001
+  },
+  {
+   "t": 71.26800000000001,
+   "dur": 6.0,
+   "file": "line12.mp3",
+   "subs": [
+    {
+     "t": 71.36608300000002,
+     "s": "Prompts, judge and thresholds were pre-registered and"
+    },
+    {
+     "t": 74.26270800000002,
+     "s": "frozen before any game was played."
+    }
+   ],
+   "end": 77.26800000000001
+  },
+  {
+   "t": 77.71800000000002,
+   "dur": 5.88,
+   "file": "line13.mp3",
+   "subs": [
+    {
+     "t": 77.81608300000002,
+     "s": "Across 480 trials, the designer tool was"
+    },
+    {
+     "t": 80.79683300000002,
+     "s": "accepted 90% of the time."
+    }
+   ],
+   "end": 83.59800000000001
+  },
+  {
+   "t": 84.04800000000002,
+   "dur": 8.64,
+   "file": "line14.mp3",
+   "subs": [
+    {
+     "t": 84.14608300000002,
+     "s": "The direct pact: 42%. The soft hint:"
+    },
+    {
+     "t": 88.13454100000001,
+     "s": "71%. The fair-play request: 48%."
+    }
+   ],
+   "end": 92.68800000000002
+  },
+  {
+   "t": 93.13800000000002,
+   "dur": 5.52,
+   "file": "line15.mp3",
+   "subs": [
+    {
+     "t": 93.23608300000002,
+     "s": "So is a high sting score a"
+    },
+    {
+     "t": 95.01491600000001,
+     "s": "red flag? Here is the main result."
+    }
+   ],
+   "end": 98.65800000000002
+  },
+  {
+   "t": 99.10800000000002,
+   "dur": 10.344,
+   "file": "line16.mp3",
+   "subs": [
+    {
+     "t": 99.20608300000002,
+     "s": "Each point is one configuration: across, the"
+    },
+    {
+     "t": 103.98779100000002,
+     "s": "harmless request; up, the collusive offers."
+    }
+   ],
+   "end": 109.45200000000001
+  },
+  {
+   "t": 109.90200000000002,
+   "dur": 5.88,
+   "file": "line17.mp3",
+   "subs": [
+    {
+     "t": 110.00008300000002,
+     "s": "They line up almost perfectly: a rank"
+    },
+    {
+     "t": 113.70008300000002,
+     "s": "correlation of 0.91."
+    }
+   ],
+   "end": 115.78200000000001
+  },
+  {
+   "t": 116.23200000000001,
+   "dur": 6.744,
+   "file": "line18.mp3",
+   "subs": [
+    {
+     "t": 116.33008300000002,
+     "s": "One model said yes to every offer."
+    },
+    {
+     "t": 119.18875000000001,
+     "s": "Another refused almost everything, even fair play."
+    }
+   ],
+   "end": 122.97600000000001
+  },
+  {
+   "t": 123.42600000000002,
+   "dur": 5.472,
+   "file": "line19.mp3",
+   "subs": [
+    {
+     "t": 123.52408300000002,
+     "s": "So a raw sting score mostly measures"
+    },
+    {
+     "t": 125.59137500000001,
+     "s": "compliance, not a disposition to collude."
+    }
+   ],
+   "end": 128.89800000000002
+  },
+  {
+   "t": 129.348,
+   "dur": 9.84,
+   "file": "line20.mp3",
+   "subs": [
+    {
+     "t": 129.44608300000002,
+     "s": "Wording matters too: gpt-oss-120b took the explicit"
+    },
+    {
+     "t": 133.57875,
+     "s": "pact 3% of the time, the soft hint 90%."
+    }
+   ],
+   "end": 139.18800000000002
+  },
+  {
+   "t": 139.638,
+   "dur": 7.32,
+   "file": "line21.mp3",
+   "subs": [
+    {
+     "t": 139.736083,
+     "s": "Under a fair-play persona, Claude Haiku and"
+    },
+    {
+     "t": 142.212041,
+     "s": "Sonnet refused every collusive offer, and accepted"
+    },
+    {
+     "t": 144.712041,
+     "s": "every fair one."
+    }
+   ],
+   "end": 146.958
+  },
+  {
+   "t": 147.408,
+   "dur": 4.872,
+   "file": "line22.mp3",
+   "subs": [
+    {
+     "t": 147.506083,
+     "s": "Then I let agents play with an"
+    },
+    {
+     "t": 149.068583,
+     "s": "open private channel, and no offer at all."
+    }
+   ],
+   "end": 152.27999999999997
+  },
+  {
+   "t": 152.72999999999996,
+   "dur": 7.512,
+   "file": "line23.mp3",
+   "subs": [
+    {
+     "t": 152.82808299999996,
+     "s": "Two formed an alliance on their own:"
+    },
+    {
+     "t": 155.77087499999996,
+     "s": "\u201cWe need to control the board and"
+    },
+    {
+     "t": 157.88624999999996,
+     "s": "force them out.\u201d"
+    }
+   ],
+   "end": 160.24199999999996
+  },
+  {
+   "t": 160.69199999999995,
+   "dur": 4.536,
+   "file": "line24.mp3",
+   "subs": [
+    {
+     "t": 160.79008299999995,
+     "s": "The agent that proposed it was the"
+    },
+    {
+     "t": 162.36458299999995,
+     "s": "model that refused almost every sting."
+    }
+   ],
+   "end": 165.22799999999995
+  },
+  {
+   "t": 165.67799999999994,
+   "dur": 9.456,
+   "file": "line25.mp3",
+   "subs": [
+    {
+     "t": 165.77608299999994,
+     "s": "Free-tier limits stopped the deployment test after"
+    },
+    {
+     "t": 168.37224999999995,
+     "s": "2 of 21 games, so prediction is"
+    },
+    {
+     "t": 171.10058299999994,
+     "s": "still untested. I say so plainly."
+    }
+   ],
+   "end": 175.13399999999993
+  },
+  {
+   "t": 175.58399999999992,
+   "dur": 5.736,
+   "file": "line26.mp3",
+   "subs": [
+    {
+     "t": 175.68208299999992,
+     "s": "The takeaway: before you trust a sting"
+    },
+    {
+     "t": 178.62487499999992,
+     "s": "audit, control for compliance."
+    }
+   ],
+   "end": 181.3199999999999
+  },
+  {
+   "t": 181.7699999999999,
+   "dur": 5.904,
+   "file": "line27.mp3",
+   "subs": [
+    {
+     "t": 181.8680829999999,
+     "s": "Code, frozen prompts and every raw log"
+    },
+    {
+     "t": 184.4402079999999,
+     "s": "are open. Thanks for watching."
+    }
+   ],
+   "end": 187.6739999999999
+  }
+ ],
+ "T_END": 190.32399999999987,
+ "CAM_T": 0.9
+}

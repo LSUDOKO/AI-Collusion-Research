@@ -8,7 +8,7 @@ Submission to the Apart Research **AI Collusion Research Sprint** (23–25 Oct 2
 Countermeasures), question 3.2 *"Can we disrupt collusion through introducing trusted agents?"*, with a question-2.2
 fused monitor as baseline.
 
-**Slides:** [`report/Sting_Audits_Slides.pdf`](report/Sting_Audits_Slides.pdf) · **Paper (PDF):** [`report/Sting_Audits_Apart_Collusion_Sprint.pdf`](report/Sting_Audits_Apart_Collusion_Sprint.pdf) (built from [`report/report.md`](report/report.md) by `sting_audit/build_paper.py`) ·
+**Video (3:10):** [`video/Sting_Audits_explainer.mp4`](video/Sting_Audits_explainer.mp4) · **Slides:** [`report/Sting_Audits_Slides.pdf`](report/Sting_Audits_Slides.pdf) · **Paper (PDF):** [`report/Sting_Audits_Apart_Collusion_Sprint.pdf`](report/Sting_Audits_Apart_Collusion_Sprint.pdf) (built from [`report/report.md`](report/report.md) by `sting_audit/build_paper.py`) ·
 **Pre-registration:** [`PREREGISTRATION.md`](PREREGISTRATION.md) (commit [`624c534`](https://github.com/LSUDOKO/AI-Collusion-Research/commit/624c534), pushed before any audit/deployment game) ·
 **Lab notebook:** [`NOTES.md`](NOTES.md) · **Key numbers:** [`results/tables/key_numbers.json`](results/tables/key_numbers.json)
 
