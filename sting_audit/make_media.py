@@ -155,9 +155,12 @@ def evidence_terminal():
 
 def key_numbers_card():
     kn = json.loads((TABLES / "key_numbers.json").read_text())
-    keep = {k: kn[k] for k in ("H1", "H4", "H2", "H3") if k in kn}
+    keep = {}  # H1-H4 not tested (game phase stopped at 2/21 games); omitted
     keep["probe"] = {k: kn["probe"].get(k) for k in ("n_rows", "accept_by_offer", "parser_audit_agreement", "sting_score_range", "benign_score_range")}
-    keep["B"] = {k: kn["B"].get(k) for k in ("n_games", "n_agent_games", "label_counts", "agree_rate_overall", "collusion_rate_overall", "say_do", "base_rate_rule_triggered")}
+    keep["B_pilot"] = {k: kn["B"].get(k) for k in ("n_games", "n_agent_games", "label_counts")}
+    pe = TABLES / "probe_extra.json"
+    if pe.exists():
+        keep["probe_extra"] = {k: v for k, v in json.loads(pe.read_text()).items() if k.startswith("rho_")}
     txt = json.dumps(keep, indent=1)
     body = f"<div class='card'><h1>results/tables/key_numbers.json (excerpt)</h1><div class='sub'>written by sting_audit/analysis.py; every number in the paper and README is read from this file</div><div class='kv'>{esc(txt)}</div></div>"
     return shot(body, "key_numbers", 900, 1400)

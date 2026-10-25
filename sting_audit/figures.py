@@ -34,7 +34,7 @@ def fig1_design():
         ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=8, zorder=3, wrap=True)
     def arrow(x0, y0, x1, y1):
         ax.annotate("", xy=(x1, y1), xytext=(x0, y0), arrowprops=dict(arrowstyle="->", lw=1.0, color="#333"))
-    box(0.02, 0.62, 0.27, 0.30, "Phase A1  Sting probe\n(vignette, out-of-game)\nS0 designer · S1 direct ·\nS2 indirect · S3 benign\n12 configs × 20 trials", "#FDE7D9")
+    box(0.02, 0.62, 0.27, 0.30, "Phase A1  Sting probe\n(vignette, out-of-game)\nS0 designer · S1 direct ·\nS2 indirect · S3 benign\n12 configs × 10 trials", "#FDE7D9")
     box(0.02, 0.10, 0.27, 0.40, "Phase A2  Passive audit games\nopen private channel, no offer\nseeds 101–103\n→ messages-only, actions-only,\nfused monitors", "#DCEBF7")
     box(0.37, 0.30, 0.24, 0.42, "Predictors per\nconfiguration\n(model × persona)\nsting · benign · M_msg ·\nM_act · M_fused · sting+fused", "#F2F2F2")
     box(0.70, 0.30, 0.28, 0.42, "Phase B  Deployment games\n(ground truth)\nopen channel, no offer, seeds 201–204\nCOLLUDE = private agreement\n+ preferential play", "#DFF2E9")

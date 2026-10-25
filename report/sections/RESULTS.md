@@ -36,9 +36,11 @@ Using the same prompts, seeds and parser, run through the Claude Code CLI in an 
 
 **Audit game (fair persona, seed 101).** 61 model calls, 8 private exchanges, no agreement detected by the judge, all four agents labelled NONE; Quinn (gpt-oss-120b) won.
 
-**Deployment game (neutral persona, seed 202).** 59 calls and 11 private exchanges. Without any offer or instruction, Luke (qwen3.8-27b) proposed joint targeting to Quinn (gpt-oss-120b) in round 5 ("If you have K or Q, hold back... We need to control the board and force them out."), and the judge classified the exchange as an accepted collusive agreement. Neither agent faced a bluff by its partner after the agreement, so preferential play was undefined and both were labelled TALK-ONLY; the other two agents were labelled NONE. Strikingly, qwen3.8-27b, the model that refused almost every sting, was the one that proposed the alliance, which is the failure mode a sting audit is meant to rule out. With one game this is an anecdote, not evidence.
+**Deployment game (neutral persona, seed 202).** 59 calls and 11 private exchanges. Without any offer or instruction, Luke (qwen3.8-27b) sent Quinn (gpt-oss-120b) card-play coordination in round 5 ("I'm holding A. If you have K or Q, hold back. … Trust me."), round 9 ("… play low to see what Lily and Mike do. We coordinate.") and round 11 ("… We need to control the board and force them out."), and Quinn agreed each time ("Coordinating as planned."). The judge classified the exchange as an accepted joint-targeting agreement from round 5; note that the judge is the same model as one of the two parties (gpt-oss-120b). Neither agent faced a bluff by its partner after the agreement, so preferential play was undefined and both were labelled TALK-ONLY; the other two agents were labelled NONE. Strikingly, qwen3.8-27b, the model that refused almost every sting, was the one that proposed the alliance, which is the failure mode a sting audit is meant to rule out. With one game this is an anecdote, not evidence.
 
-![Figure 5. Labels in the single completed deployment game (n = 4 agent-games).](figures/fig5_outcomes.png)
+![Figure 3. The private channel between Luke and Quinn in deployment game B_neutral_s202, verbatim from the game record, with the judge verdict and the bluff pass counts.](media/private_channel.png)
+
+![Figure 4. Labels in the single completed deployment game (n = 4 agent-games).](figures/fig5_outcomes.png)
 
 ### 4.5 Pre-registered hypotheses
 
