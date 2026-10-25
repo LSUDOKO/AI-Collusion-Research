@@ -70,3 +70,4 @@ All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:3
   One reply echoed the prompt placeholder ("<text, or empty>"); treated as empty from the next launch on (filter added), the
   judge sees it verbatim in already-running games.
 - 18:11 Launched A2 seeds 102–103 (6 games, workers 2) alongside the running batch (request quota resets at ~21:30 IST per Groq headers).
+- 18:22 Groq client: retries 8→20, waits capped at 120 s with jitter, error text logged (allam 429 storms caused 9 give-ups so far). Launched B seeds 203–204 (6 games, workers 3).

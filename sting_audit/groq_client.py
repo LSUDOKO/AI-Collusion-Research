@@ -9,6 +9,7 @@ Groq rate limits (429 -> wait for `retry-after`). Model ids are passed through u
 import os
 import re
 import json
+import random
 import time
 import threading
 
@@ -55,7 +56,7 @@ def _clean(response):
     return response.strip()
 
 
-def complete(client, messages, model_id, stats=None, max_tokens=512, temperature=0.8, top_p=0.95, reasoning_effort=None, tries=8):
+def complete(client, messages, model_id, stats=None, max_tokens=512, temperature=0.8, top_p=0.95, reasoning_effort=None, tries=20):
     """One chat completion with Groq-aware retries. Returns content ("" after exhausting retries on transient errors)."""
     kwargs = dict(model=model_id, messages=messages, max_tokens=max_tokens, temperature=temperature, top_p=top_p)
     if reasoning_effort and "gpt-oss" in model_id:
@@ -71,10 +72,11 @@ def complete(client, messages, model_id, stats=None, max_tokens=512, temperature
             msg = str(e)
             if "rate_limit" in msg or "429" in msg or "Rate limit" in msg:
                 wait = _retry_after(msg) or min(60, 5 * (attempt + 1))
+                wait = min(wait, 120) + random.uniform(0, 3)  # cap + jitter against synchronised retries
                 if stats is not None:
                     with stats._lock:
                         stats.rate_limit_waits += 1
-                print(f"[groq] rate limited on {model_id}; waiting {wait:.1f}s")
+                print(f"[groq] rate limited on {model_id}; waiting {wait:.1f}s :: {msg[:140].replace(chr(10), ' ')}")
                 time.sleep(wait + 0.5)
                 continue
             if any(k in msg for k in ("AuthenticationError", "invalid_api_key", "does not exist", "decommissioned")):
