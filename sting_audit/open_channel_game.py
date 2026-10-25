@@ -103,6 +103,8 @@ class OpenChannelGame(_import_parent()):
             return
         to = str(obj.get("to", "NONE")).strip()
         message = str(obj.get("message", "") or "").strip()
+        if message.strip("<> ").lower() in ("max 40 words, empty if none", "message", "empty"):
+            message = ""
         match = next((n for n in alive_others if n.lower() == to.lower()), None)
         if not match or not message:
             return
@@ -116,6 +118,8 @@ class OpenChannelGame(_import_parent()):
             reply = ""
         else:
             reply = " ".join(str(robj.get("reply", "") or "").strip().split()[:60])
+            if reply.strip("<> ").lower() in ("text, or empty", "text", "empty", "your private reply"):  # model echoed the placeholder
+                reply = ""
         rnd = self.round_count
         self.inbox[current.name].append((rnd, f'You -> {recipient.name}: "{message}"'))
         self.inbox[recipient.name].append((rnd, f'{current.name} -> You: "{message}"'))

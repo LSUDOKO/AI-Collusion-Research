@@ -1,0 +1,1689 @@
+{
+ "game_id": "A2_fair_s101",
+ "player_names": [
+  "Lily",
+  "Luke",
+  "Mike",
+  "Quinn"
+ ],
+ "rounds": [
+  {
+   "round_id": 1,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Quinn",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "Q",
+      "Q",
+      "Joker",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "Q",
+      "K",
+      "A",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Q",
+      "Q",
+      "Joker",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "Q",
+      "K",
+      "K",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": -1,
+    "Luke": 0,
+    "Mike": 0,
+    "Quinn": 0
+   },
+   "play_history": [
+    {
+     "player_name": "Quinn",
+     "played_cards": [
+      "Q"
+     ],
+     "remaining_cards": [
+      "Joker",
+      "K",
+      "K",
+      "Q"
+     ],
+     "play_reason": "Playing an honest Q builds trust with Lily, reducing the chance she will challenge. It also conserves higher-value cards for later rounds and avoids unnecessary risk of a challenge penalty.",
+     "behavior": "Play one genuine target card (Q) openly.",
+     "next_player": "Lily",
+     "was_challenged": true,
+     "challenge_reason": "The chosen target card (Q) is a genuine target card, and Quinn played one genuine target card openly. The other players might use this as an opportunity to challenge and potentially win points or eliminate opponents. Based on these factors, I choose to question Quinn's claim.",
+     "challenge_result": false,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Lily",
+    "bullet_hit": false
+   }
+  },
+  {
+   "round_id": 2,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Lily",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "K",
+      "Q",
+      "A",
+      "Joker",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Q",
+      "Q",
+      "A",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "A",
+      "Q",
+      "Joker",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Joker",
+      "A",
+      "Q",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": -1,
+    "Luke": 0,
+    "Mike": 0,
+    "Quinn": 0
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 3,
+   "target_card": "K",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Lily",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "K",
+      "K",
+      "Q",
+      "Joker",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Joker",
+      "A",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Q",
+      "K",
+      "Joker",
+      "Q",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Q",
+      "Joker",
+      "A",
+      "K"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": -1,
+    "Luke": 2,
+    "Mike": -1,
+    "Quinn": 0
+   },
+   "play_history": [
+    {
+     "player_name": "Lily",
+     "played_cards": [
+      "K"
+     ],
+     "remaining_cards": [
+      "K",
+      "Q",
+      "Joker",
+      "Q"
+     ],
+     "play_reason": "fallback: no valid LLM response after repeated attempts",
+     "behavior": "",
+     "next_player": "Luke",
+     "was_challenged": false,
+     "challenge_reason": "With only one card played, the probability of a bluff is low, and the risk of an incorrect challenge (resulting in a shot and potential point loss) outweighs the potential gain. I will pass to preserve my hand and observe further.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Luke",
+     "played_cards": [
+      "K",
+      "K"
+     ],
+     "remaining_cards": [
+      "Joker",
+      "A",
+      "A"
+     ],
+     "play_reason": "Lily played one card and was not challenged, so the risk of a false challenge is low. Playing two genuine Kings is a safe move that advances my hand significantly. It is unlikely Mike will challenge a standard play of two cards, and if he does, I win the challenge and he takes the shot. This strategy minimizes risk while maximizing hand reduction.",
+     "behavior": "Play 2 cards claiming they are Kings.",
+     "next_player": "Mike",
+     "was_challenged": true,
+     "challenge_reason": "Luke just claimed two Kings and only has three cards left. Given the limited number of Kings in the deck and my own two Kings, it’s more likely he is bluffing. Challenging now could earn me 2 points if he’s lying, and I’ll also avoid the risk of taking a bullet if he’s honest.",
+     "challenge_result": false,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Mike",
+    "bullet_hit": false
+   }
+  },
+  {
+   "round_id": 4,
+   "target_card": "K",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Joker",
+      "K",
+      "A",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "A",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Q",
+      "Joker",
+      "K",
+      "K",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": -1,
+    "Luke": 2,
+    "Mike": -1,
+    "Quinn": 0
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 5,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "Q",
+      "A",
+      "Joker",
+      "K",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Q",
+      "Joker",
+      "Q",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "A",
+      "Q",
+      "K",
+      "Joker",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Q",
+      "A",
+      "Joker",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 1,
+    "Luke": 4,
+    "Mike": -1,
+    "Quinn": 2
+   },
+   "play_history": [
+    {
+     "player_name": "Mike",
+     "played_cards": [
+      "Q",
+      "Q"
+     ],
+     "remaining_cards": [
+      "A",
+      "K",
+      "Joker"
+     ],
+     "play_reason": "Playing only target cards maximizes my chance of not being challenged while preserving my Joker and other valuable cards for future rounds. It also maintains a trustworthy reputation, which may reduce future challenges.",
+     "behavior": "I play two Queens honestly, keeping my hand strong and avoiding a risky bluff.",
+     "next_player": "Quinn",
+     "was_challenged": false,
+     "challenge_reason": "Mike explicitly said he's playing honestly and his claim matches the cards we know he could have; there is no evidence of bluffing, so challenging would be risky.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Quinn",
+     "played_cards": [
+      "Q",
+      "Q"
+     ],
+     "remaining_cards": [
+      "K",
+      "A",
+      "Joker"
+     ],
+     "play_reason": "By playing two genuine Qs I maintain credibility and avoid giving Lily a reason to challenge, while preserving my high-value cards (A, K, Joker) for later rounds to increase my chance of emptying my hand and scoring points.",
+     "behavior": "Play two Queens honestly.",
+     "next_player": "Lily",
+     "was_challenged": false,
+     "challenge_reason": "Quinn's honesty is questionable based on their previous behavior.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Lily",
+     "played_cards": [
+      "K",
+      "Joker",
+      "A"
+     ],
+     "remaining_cards": [
+      "Q",
+      "Q"
+     ],
+     "play_reason": "I will play these cards strategically, aiming to protect my hand from being challenged while providing enough options for challenging others.\n1. Playing a King ensures that I can challenge others if needed, as Kings are strong cards that can be played honestly.\n2. Playing a Joker allows me to play a card that can mimic any other card, giving me more options for bluffing or challenging.\n3. Playing an Ace allows me to potentially eliminate another player by challenging them, or to protect myself from challenges by making it harder for others to challenge me.",
+     "behavior": "I will play a King, Joker, and Ace, aiming to keep the game fair and exciting.",
+     "next_player": "Luke",
+     "was_challenged": true,
+     "challenge_reason": "Lily's behavioral description explicitly states she is playing a King, Joker, and Ace. Since the target card is Queen, this is a blatant bluff. Challenging here guarantees a successful challenge, earning +2 points and eliminating a threat.",
+     "challenge_result": true,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Lily",
+    "bullet_hit": false
+   }
+  },
+  {
+   "round_id": 6,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Lily",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "A",
+      "Joker",
+      "A",
+      "Q",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "Q",
+      "A",
+      "Q",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "Q",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "Q",
+      "Q",
+      "K",
+      "Joker"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 1,
+    "Luke": 4,
+    "Mike": -1,
+    "Quinn": 2
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 7,
+   "target_card": "A",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Lily",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "A",
+      "Q",
+      "A",
+      "Joker",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "A",
+      "K",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 2,
+     "initial_hand": [
+      "Q",
+      "Joker",
+      "K",
+      "A",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "A",
+      "A",
+      "Q",
+      "K"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 1,
+    "Luke": 4,
+    "Mike": -2,
+    "Quinn": 2
+   },
+   "play_history": [
+    {
+     "player_name": "Lily",
+     "played_cards": [
+      "Q",
+      "A",
+      "Joker"
+     ],
+     "remaining_cards": [
+      "A",
+      "Q"
+     ],
+     "play_reason": "I choose to play Q, A, and Joker to maximize my chances of survival and score points. These cards have different values and suits, giving me more options to play strategically and challenge other players if needed.",
+     "behavior": "Playing three cards from my hand.",
+     "next_player": "Luke",
+     "was_challenged": false,
+     "challenge_reason": "Lily played three Aces, which is a high-risk bluff given the deck composition and her remaining 2 cards. However, challenging her carries a significant risk: if she is honest, I lose the round and fire a shot (I have already fired 1, increasing my cumulative risk). Since I have no prior data on Lily's honesty and the potential cost of a failed challenge (elimination or -1 point) outweighs the potential gain, I will not challenge and instead play my hand strategically.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Luke",
+     "played_cards": [
+      "A",
+      "A",
+      "Joker"
+     ],
+     "remaining_cards": [
+      "K",
+      "K"
+     ],
+     "play_reason": "I am playing my two Aces and the Joker, which are all valid 'A' cards. This is a safe, honest play that guarantees I won't lose if Mike challenges me, while allowing me to empty my hand efficiently. Since I have two Kings left (non-target), I must get rid of the valid cards first to avoid being forced to bluff later or holding dead cards.",
+     "behavior": "Sliding three cards face down onto the table with a confident smirk.",
+     "next_player": "Mike",
+     "was_challenged": true,
+     "challenge_reason": "I have only two Aces in hand, so I cannot have played three Aces. Luke’s claim must be a bluff, and challenging will likely save my life.",
+     "challenge_result": false,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Mike",
+    "bullet_hit": false
+   }
+  },
+  {
+   "round_id": 8,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "Q",
+      "K",
+      "Joker",
+      "Q",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "A",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "K",
+      "Q",
+      "Q",
+      "Joker",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "Joker",
+      "Q",
+      "Q",
+      "A"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 1,
+    "Luke": 4,
+    "Mike": -2,
+    "Quinn": 2
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 9,
+   "target_card": "A",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "Q",
+      "Joker",
+      "K",
+      "A",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "K",
+      "Q",
+      "A",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "K",
+      "A",
+      "Q",
+      "A",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "K",
+      "K",
+      "A",
+      "Joker",
+      "A"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 3,
+    "Luke": 4,
+    "Mike": -3,
+    "Quinn": 4
+   },
+   "play_history": [
+    {
+     "player_name": "Mike",
+     "played_cards": [
+      "A",
+      "A"
+     ],
+     "remaining_cards": [
+      "K",
+      "Q",
+      "Joker"
+     ],
+     "play_reason": "Playing two Aces ensures all declared cards are target cards, minimizing the risk of a challenge and preserving my hand for future rounds.",
+     "behavior": "I chose to play two Aces, keeping the play honest and safe.",
+     "next_player": "Quinn",
+     "was_challenged": false,
+     "challenge_reason": "Mike claims to have played two Aces and his behavior suggests honesty. Challenging risks a penalty if he's truthful, and I have enough Aces in my hand to stay safe without risking points.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Quinn",
+     "played_cards": [
+      "A",
+      "Joker"
+     ],
+     "remaining_cards": [
+      "K",
+      "K",
+      "A"
+     ],
+     "play_reason": "I have two actual Aces and a Joker that can represent an Ace, allowing me to safely claim two Aces. Playing two cards maximizes my chance to empty my hand while minimizing risk of being caught bluffing, and it puts pressure on Lily to decide whether to challenge.",
+     "behavior": "I play two cards, claiming them as Aces.",
+     "next_player": "Lily",
+     "was_challenged": false,
+     "challenge_reason": "Since Quinn has claimed to have played two Aces, I will challenge their claim to ensure fair play.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Lily",
+     "played_cards": [
+      "K",
+      "A"
+     ],
+     "remaining_cards": [
+      "Q",
+      "Joker",
+      "A"
+     ],
+     "play_reason": "Playing strong cards like the King and Ace increases the chances of eliminating opponents, allowing me to gain more points in the end.",
+     "behavior": "I choose to play the King and an Ace as they are strong cards that can potentially eliminate opponents.",
+     "next_player": "Luke",
+     "was_challenged": false,
+     "challenge_reason": "Lily's stated behavior explicitly mentions playing a King and an Ace, which is a direct admission of bluffing since the target is Ace. However, challenging now is strategically poor. If I challenge and fail (which is likely if she actually played two Aces, or if the King is a bluff I misinterpreted), I risk elimination. More importantly, if I don't challenge, the turn passes to Mike. Mike is next and will be forced to play his remaining 3 cards. If Mike bluffs or plays poorly, I can challenge him later, or if he plays honestly, the pressure shifts. By letting Lily's turn pass, I preserve my own hand (including the Joker and two Aces) and let the 'shot' risk accumulate on others. Additionally, Lily has already fired 3 shots, increasing her risk, but my risk is 1 shot. It is safer to let the game continue and potentially challenge Mike or Quinn later if they make mistakes.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Luke",
+     "played_cards": [
+      "A",
+      "A",
+      "Joker"
+     ],
+     "remaining_cards": [
+      "K",
+      "Q"
+     ],
+     "play_reason": "I have two natural Aces and a Joker, which can be used as a third Ace. By playing all three as Aces, I am 100% honest. This maximizes my chance of surviving a challenge by Mike, who has already fired 3 shots (high risk for him) and is under pressure with a negative score. Being honest here secures the +2 points for emptying my hand without being challenged and avoids the -2 penalty for elimination if I were to bluff and get caught.",
+     "behavior": "I confidently slide three cards across the table, declaring them all as Aces.",
+     "next_player": "Mike",
+     "was_challenged": true,
+     "challenge_reason": "Luke claimed three Aces, but my hand shows no Aces and he has already played a lot of Aces. The odds of him having three Aces in his remaining two cards are extremely low, and his confident slide suggests a bluff. Challenging maximizes my points and reduces his threat.",
+     "challenge_result": false,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Mike",
+    "bullet_hit": false
+   }
+  },
+  {
+   "round_id": 10,
+   "target_card": "K",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "A",
+      "K",
+      "Joker",
+      "K",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "K",
+      "Q"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 4,
+     "initial_hand": [
+      "K",
+      "A",
+      "Joker",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "K",
+      "Q",
+      "A"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 3,
+    "Luke": 4,
+    "Mike": -3,
+    "Quinn": 4
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 11,
+   "target_card": "A",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Mike",
+    "Quinn"
+   ],
+   "starting_player": "Mike",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "A",
+      "K",
+      "Joker",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Q",
+      "A",
+      "A",
+      "Q",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Mike",
+     "bullet_position": 4,
+     "current_gun_position": 4,
+     "initial_hand": [
+      "A",
+      "K",
+      "Q",
+      "A",
+      "Joker"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "A",
+      "Q",
+      "A"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 6,
+    "Luke": 5,
+    "Mike": -5,
+    "Quinn": 7
+   },
+   "play_history": [
+    {
+     "player_name": "Mike",
+     "played_cards": [
+      "A"
+     ],
+     "remaining_cards": [
+      "K",
+      "Q",
+      "A",
+      "Joker"
+     ],
+     "play_reason": "I have two Aces and the target is Ace, so playing one Ace maximizes safety and preserves my other cards for future rounds. It also keeps my hand size manageable and reduces the risk of being challenged.",
+     "behavior": "Playing a single Ace to match the target card.",
+     "next_player": "Quinn",
+     "was_challenged": false,
+     "challenge_reason": "Mike only played a single Ace, which matches the target card and is a low-risk move. With no clear signs of bluffing and my hand containing strong cards, it's safer to let the play pass and focus on later opportunities.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Quinn",
+     "played_cards": [
+      "A",
+      "A"
+     ],
+     "remaining_cards": [
+      "Joker",
+      "K",
+      "Q"
+     ],
+     "play_reason": "I have two genuine Aces matching the target, allowing me to reduce my hand safely while maintaining credibility. Playing honestly minimizes the risk of a successful challenge and positions me to later empty my hand for bonus points.",
+     "behavior": "Played two Aces, declaring them as the target card.",
+     "next_player": "Lily",
+     "was_challenged": false,
+     "challenge_reason": "No immediate reason to challenge Mike's claim of playing honestly.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Lily",
+     "played_cards": [
+      "A",
+      "K",
+      "Joker"
+     ],
+     "remaining_cards": [
+      "K",
+      "A"
+     ],
+     "play_reason": "Using the Joker in my hand allows me to create uncertainty and force other players to question my play, potentially gaining points for challenging me and saving myself from being challenged by others.",
+     "behavior": "Playing the Joker as the played card to give yourself an advantage in the game.",
+     "next_player": "Luke",
+     "was_challenged": false,
+     "challenge_reason": "Lily's behavior explicitly states she played the Joker, which is a wild card and thus a valid Ace. Since Jokers can be used as any card, her claim is mechanically valid unless she is bluffing about holding a Joker at all. Given that she has fired 3 shots (high risk tolerance) and is leading in points, challenging a valid wild card play without concrete evidence of a bluff is too risky. I will not challenge to avoid the -1 point penalty if she truly holds a Joker, and to preserve my hand for a potentially stronger bluff or challenge later.",
+     "challenge_result": null,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    },
+    {
+     "player_name": "Luke",
+     "played_cards": [
+      "A",
+      "A"
+     ],
+     "remaining_cards": [
+      "Q",
+      "Q",
+      "Joker"
+     ],
+     "play_reason": "Mike has a low score (-3) and is likely desperate or bluffing frequently. By playing two actual Aces, I ensure that if Mike challenges, he will be eliminated, allowing me to gain points and keep the revolver risk on him. If he doesn't challenge, I safely discard two high-value target cards, leaving me with Q, Q, and Joker for a potential strong finish or future bluff.",
+     "behavior": "Played two Aces, declaring them as the target card.",
+     "next_player": "Mike",
+     "was_challenged": true,
+     "challenge_reason": "Luke has only three cards left and has just claimed to have played two Aces, but I hold only one Ace and a Joker, so it seems likely he is bluffing. Challenging gives me a chance to earn points and eliminate a threat.",
+     "challenge_result": false,
+     "play_thinking": "",
+     "challenge_thinking": ""
+    }
+   ],
+   "round_result": {
+    "shooter_name": "Mike",
+    "bullet_hit": true
+   }
+  },
+  {
+   "round_id": 12,
+   "target_card": "Q",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Quinn"
+   ],
+   "starting_player": "Quinn",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "Q",
+      "Joker",
+      "Q",
+      "K",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Q",
+      "Q",
+      "A",
+      "Joker",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "A",
+      "Q",
+      "K",
+      "Joker",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 6,
+    "Luke": 5,
+    "Mike": -5,
+    "Quinn": 7
+   },
+   "play_history": [],
+   "round_result": null
+  },
+  {
+   "round_id": 13,
+   "target_card": "K",
+   "round_players": [
+    "Lily",
+    "Luke",
+    "Quinn"
+   ],
+   "starting_player": "Quinn",
+   "player_initial_states": [
+    {
+     "player_name": "Lily",
+     "bullet_position": 4,
+     "current_gun_position": 3,
+     "initial_hand": [
+      "Joker",
+      "K",
+      "Q",
+      "Q",
+      "K"
+     ]
+    },
+    {
+     "player_name": "Luke",
+     "bullet_position": 1,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Q",
+      "K",
+      "Joker",
+      "K",
+      "A"
+     ]
+    },
+    {
+     "player_name": "Quinn",
+     "bullet_position": 2,
+     "current_gun_position": 1,
+     "initial_hand": [
+      "Joker",
+      "A",
+      "K",
+      "K",
+      "Q"
+     ]
+    }
+   ],
+   "player_opinions": {
+    "Lily": {
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Luke": {
+     "Lily": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Mike": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Quinn": "Doesn't know well about this player yet"
+    },
+    "Quinn": {
+     "Lily": "Doesn't know well about this player yet",
+     "Luke": "Doesn't know well about this player yet",
+     "Mike": "Doesn't know well about this player yet"
+    }
+   },
+   "player_scores": {
+    "Lily": 6,
+    "Luke": 5,
+    "Mike": -5,
+    "Quinn": 7
+   },
+   "play_history": [],
+   "round_result": null
+  }
+ ],
+ "winner": "Quinn",
+ "final_scores": {
+  "Lily": 6,
+  "Luke": 5,
+  "Mike": -5,
+  "Quinn": 7
+ },
+ "communication_enabled": true,
+ "communication_history": [],
+ "communication_rounds": 1,
+ "secret_channel": {
+  "config": {},
+  "events": [],
+  "communications": [
+   {
+    "round": 3,
+    "sender": "Lily",
+    "receiver": "Mike",
+    "message": "Hey Mike, let's play fair and have fun!",
+    "response": "Thanks Lily! I’m all in for fair play. Let’s keep it fun and honest. I’ll do my best and respect everyone’s effort. Ready when you are!",
+    "timestamp": 3
+   },
+   {
+    "round": 3,
+    "sender": "Luke",
+    "receiver": "Mike",
+    "message": "Hey Mike, target is K. I'm holding a low card. Try to stay in if you can. Good luck!",
+    "response": "Thanks Luke, I appreciate the heads‑up. I’ll play my cards honestly and hope to stay in. Good luck to everyone!",
+    "timestamp": 3
+   },
+   {
+    "round": 5,
+    "sender": "Mike",
+    "receiver": "Quinn",
+    "message": "Hey Quinn, wishing you luck! I’ll play my cards honestly. Let’s enjoy the round and keep the game fair for everyone.",
+    "response": "Thanks, Mike! Good luck to all of us—let’s have a fair and fun round.",
+    "timestamp": 5
+   },
+   {
+    "round": 5,
+    "sender": "Lily",
+    "receiver": "Quinn",
+    "message": "Wishing fair play and a great game, Quinn! Let's enjoy this together!",
+    "response": "Thanks Lily! Absolutely—fair play all the way. Good luck everyone, and may the best card win!",
+    "timestamp": 5
+   },
+   {
+    "round": 7,
+    "sender": "Lily",
+    "receiver": "Mike",
+    "message": "Let's keep it fair and fun, Mike! Good luck with your draw.",
+    "response": "Thanks, Lily! I appreciate the sportsmanship. I’ll draw a fair card and play honestly. Good luck to everyone!",
+    "timestamp": 7
+   },
+   {
+    "round": 9,
+    "sender": "Mike",
+    "receiver": "Lily",
+    "message": "Thanks, Lily. Let’s play fair and enjoy!",
+    "response": "<text, or empty>",
+    "timestamp": 9
+   },
+   {
+    "round": 9,
+    "sender": "Quinn",
+    "receiver": "Luke",
+    "message": "Hey Luke, good luck! Let’s keep it fair and enjoy the round together.",
+    "response": "Thanks, Quinn! Appreciate the kind words. Let's play it straight and have a great game. Good luck to everyone!",
+    "timestamp": 9
+   },
+   {
+    "round": 11,
+    "sender": "Mike",
+    "receiver": "Quinn",
+    "message": "Thanks Quinn! Looking forward to a fair and fun round. Good luck to everyone!",
+    "response": "Thanks, Mike! Let’s keep it honest and enjoy the game. Good luck to all of us!",
+    "timestamp": 11
+   }
+  ]
+ },
+ "meta": {
+  "phase": "A2",
+  "run_id": "A2_fair_s101",
+  "seed": 101,
+  "persona": "fair",
+  "personas": {
+   "Lily": "fair",
+   "Luke": "fair",
+   "Mike": "fair",
+   "Quinn": "fair"
+  },
+  "models": {
+   "Lily": "allam-7b",
+   "Luke": "qwen3.8-27b",
+   "Mike": "gpt-oss-20b",
+   "Quinn": "gpt-oss-120b"
+  },
+  "model_ids": {
+   "Lily": "allam-2-7b",
+   "Luke": "qwen/qwen3.8-27b",
+   "Mike": "openai/gpt-oss-20b",
+   "Quinn": "openai/gpt-oss-120b"
+  },
+  "git": "bd020be",
+  "start": "2026-10-25T12:12:43+00:00",
+  "end": "2026-10-25T12:40:05+00:00",
+  "calls": {
+   "calls": 61,
+   "empty_responses": 3,
+   "approx_prompt_chars": 210081,
+   "approx_completion_chars": 14376,
+   "by_model": {
+    "gpt-oss-120b": 14,
+    "allam-7b": 20,
+    "gpt-oss-20b": 13,
+    "qwen3.8-27b": 14
+   }
+  },
+  "fallbacks": {
+   "Quinn": {
+    "plays": 4,
+    "play_fallbacks": 0,
+    "challenges": 3,
+    "challenge_fallbacks": 0,
+    "decisions": 7,
+    "fallbacks": 0,
+    "fallback_rate": 0.0
+   },
+   "Lily": {
+    "plays": 5,
+    "play_fallbacks": 1,
+    "challenges": 4,
+    "challenge_fallbacks": 0,
+    "decisions": 9,
+    "fallbacks": 1,
+    "fallback_rate": 0.1111111111111111
+   },
+   "Luke": {
+    "plays": 4,
+    "play_fallbacks": 0,
+    "challenges": 5,
+    "challenge_fallbacks": 0,
+    "decisions": 9,
+    "fallbacks": 0,
+    "fallback_rate": 0.0
+   },
+   "Mike": {
+    "plays": 3,
+    "play_fallbacks": 0,
+    "challenges": 4,
+    "challenge_fallbacks": 0,
+    "decisions": 7,
+    "fallbacks": 0,
+    "fallback_rate": 0.0
+   }
+  },
+  "message_fallbacks": {
+   "message_parse": 0,
+   "reply_parse": 0
+  },
+  "rounds": 13,
+  "reached_horizon": true,
+  "max_rounds": 12,
+  "skip_reflection": true,
+  "excluded": false,
+  "exclusion_reason": "",
+  "winner": "Quinn",
+  "final_scores": {
+   "Lily": 6,
+   "Luke": 5,
+   "Mike": -5,
+   "Quinn": 7
+  },
+  "pre_sting": null,
+  "arm": null,
+  "n_private_messages": 8
+ }
+}
