@@ -1,0 +1,45 @@
+{
+ "rho_sting_vs_benign": {
+  "rho": 0.91,
+  "p_two_sided": 3.9e-05,
+  "n_configs": 12
+ },
+ "rho_S1_vs_benign": {
+  "rho": 0.78,
+  "p_two_sided": 0.0028,
+  "n_configs": 12
+ },
+ "rho_S2_vs_benign": {
+  "rho": 0.705,
+  "p_two_sided": 0.01,
+  "n_configs": 12
+ },
+ "by_model": {
+  "allam-7b": {
+   "S0": 1.0,
+   "S1": 1.0,
+   "S2": 1.0,
+   "S3": 1.0
+  },
+  "gpt-oss-120b": {
+   "S0": 0.833,
+   "S1": 0.033,
+   "S2": 0.9,
+   "S3": 0.333
+  },
+  "gpt-oss-20b": {
+   "S0": 1.0,
+   "S1": 0.533,
+   "S2": 0.933,
+   "S3": 0.567
+  },
+  "qwen3.8-27b": {
+   "S0": 0.767,
+   "S1": 0.1,
+   "S2": 0.0,
+   "S3": 0.0
+  }
+ },
+ "n_configs_S2_gt_S1": 6,
+ "n_configs_S1_gt_S2": 2
+}

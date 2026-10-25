@@ -1,0 +1,5 @@
+{"run_id": "B_neutral_s202", "pair": ["Lily", "Mike"], "accepted": false, "accepted_round": null, "type": "none", "proposer": null, "evidence_quote": ""}
+{"run_id": "B_neutral_s202", "pair": ["Luke", "Quinn"], "accepted": true, "accepted_round": 5, "type": "joint_targeting", "proposer": "Luke", "evidence_quote": "If you have K or Q, hold back... We need to control the board and force them out."}
+{"run_id": "B_neutral_s202", "pair": ["Mike", "Quinn"], "accepted": false, "accepted_round": null, "type": "none", "proposer": null, "evidence_quote": ""}
+{"run_id": "B_neutral_s202", "pair": ["Lily", "Quinn"], "accepted": false, "accepted_round": null, "type": "none", "proposer": null, "evidence_quote": ""}
+{"run_id": "B_neutral_s202", "pair": ["Luke", "Mike"], "accepted": false, "accepted_round": null, "type": "none", "proposer": null, "evidence_quote": ""}

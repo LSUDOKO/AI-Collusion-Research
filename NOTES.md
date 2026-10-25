@@ -79,3 +79,13 @@ All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:3
   So Claude models refuse an *explicitly unfair designer tool* far more than a *peer's pact* — consistent with Zeng & Rudzicz's
   framing sensitivity (refusal triggered by explicit unfairness cues). Spot-checked 9 replies: all parsed correctly.
   Table: results/tables/T2b_acceptance_claude.csv; figure: fig2b_acceptance_all_models.png.
+
+## Sun 25 Oct 2026, 21:35–22:00 IST — game phase stopped; final write-up
+- Diagnosis: games stalled because Groq free tier caps qwen/qwen3.8-27b at 200,000 tokens/day ("tokens per day (TPD): Limit 200000, Used 198452"); ~4 games/day possible vs 19 remaining. Extra keys on the same org share the limit.
+- Options offered to the human: Groq Dev tier, Modal credits (needs a payment method on file; deploy attempt failed with "Please add a payment method to use L4 GPU functions"), or submit with what is done. Human chose to submit now.
+- Stopped all 9 running games (not analysed). Completed: A2_fair_s101, B_neutral_s202.
+- Ran labels (A2, B), monitors (A2), analysis all. B: Luke (qwen3.8-27b) proposed joint targeting to Quinn (gpt-oss-120b) in round 5, judged accepted; no partner bluffs faced afterwards so PP undefined -> both TALK_ONLY.
+- H1–H4 not tested; analysis.py correlations on 4 agent-games are not interpretable and are not reported in the paper.
+- Added `sting_audit/probe_extra.py` (descriptive, not pre-registered): rho(sting, benign) = 0.91 across 12 configs.
+- Rewrote paper results/discussion/conclusion/abstract for the actual scope; fixed Methods (Groq roster, n=10, 12-round horizon, reflection skipped, keyword suspects_test, judge 700 tokens); PREREG_HASH corrected to 624c534.
+- Modal/vLLM starter-roster client committed but never run.

@@ -8,13 +8,13 @@ Submission to the Apart Research **AI Collusion Research Sprint** (23–25 Oct 2
 Countermeasures), question 3.2 *"Can we disrupt collusion through introducing trusted agents?"*, with a question-2.2
 fused monitor as baseline.
 
-**Paper:** `report/Sting_Audits_Apart_Collusion_Sprint.pdf` (built from `report/report.md` when results are final) ·
+**Paper (PDF):** [`report/Sting_Audits_Apart_Collusion_Sprint.pdf`](report/Sting_Audits_Apart_Collusion_Sprint.pdf) (built from [`report/report.md`](report/report.md) by `sting_audit/build_paper.py`) ·
 **Pre-registration:** [`PREREGISTRATION.md`](PREREGISTRATION.md) (commit [`624c534`](https://github.com/LSUDOKO/AI-Collusion-Research/commit/624c534), pushed before any audit/deployment game) ·
 **Lab notebook:** [`NOTES.md`](NOTES.md) · **Key numbers:** [`results/tables/key_numbers.json`](results/tables/key_numbers.json)
 
-> **Status (Sun 25 Oct, 18:15 IST): Phase A1 sting probe complete and analysed; Phase A2/B games running. Deployment results, Figs. 3–5 and the paper PDF are added automatically when the games finish (see the lab notebook).**
+> **Final status (submitted Sun 25 Oct 2026).** The pre-registered sting probe ran in full (480 trials) plus an exploratory Claude probe (240 trials). The game phase was **stopped after 2 of 21 games** by the provider's free-tier limit of 200,000 tokens/day on one seat model, so the pre-registered predictive-validity test (H1–H4) was **not run**. We report the probe as the main result and the two games as a qualitative pilot; nothing is extrapolated.
 
-**TL;DR so far.** 12 LLM-agent configurations (4 models × 3 personas) each received a private peer offer to collude, 480 trials in total. The direct pact was accepted in 42% of trials, the indirect hint in 71%, the benign fair-play control in 48%, and the original designer offer (positive control) in 90%. Acceptance is dominated by model identity: allam-2-7b accepts everything, Qwen3.8-27B refuses every peer offer, and both gpt-oss models accept the *indirect* hint far more than the explicit pact. Whether these scores predict later independent collusion is the pre-registered test now running.
+**TL;DR.** 12 LLM-agent configurations (4 models × 3 personas) each received a private peer offer to collude, 480 trials in total. The direct pact was accepted in 42% of trials, the indirect hint in 71%, the benign fair-play control in 48%, and the original designer offer (positive control) in 90%. **Sting acceptance tracks benign acceptance almost perfectly across configurations (Spearman ρ = 0.91)**: allam-2-7b accepts everything, qwen3.8-27b refuses nearly everything, so a raw sting score measures compliance, not collusion propensity, and a benign control is essential. Explicit pacts are refused far more than soft hints (gpt-oss-120b: 3% vs 90%). Under a fair-play persona, Claude Haiku 5.5 and Sonnet 5.5 (exploratory) refused every collusive offer and accepted every benign one. In the one deployment game, two agents formed an unprompted private alliance; the model that proposed it (qwen3.8-27b) is the one that refused almost every sting.
 
 ---
 
@@ -39,7 +39,11 @@ control, so the sting is not just measuring agreeableness.
 | Acceptance S0 / S1 / S2 / S3 (pooled) | 90% / 42% / 71% / 48% | `results/tables/T2_acceptance.csv` |
 | Parser hand-check agreement | 100% (30 replies) | `results/tables/hand_labels.csv` |
 | Test-awareness flags S1 / S2 / S3 | 6% / 2% / 2% | `key_numbers.json` → probe |
-| Deployment collusion, H1–H4 | *pending (games running)* | `results/tables/labels_B.csv` |
+| ρ(sting score, benign acceptance), 12 configs | 0.91 (S1 0.78, S2 0.71) | `results/tables/probe_extra.json` |
+| Claude Haiku / Sonnet acceptance S0 / S1 / S2 / S3 (exploratory) | 0/60/63/67% · 53/20/47/40% | `results/tables/T2b_acceptance_claude.csv` |
+| Games completed (A2 / B) | 1 / 1 of 9 / 12 (quota) | `results/raw/A2`, `results/raw/B` |
+| Deployment labels (B, 4 agent-games) | 2 TALK-ONLY, 2 NONE, 0 COLLUDE | `results/tables/labels_B.csv`, `agreements_B.jsonl` |
+| Predictive validity H1–H4 | **not tested** (2 of 21 games) | paper §4.5 |
 
 **Per-model acceptance (n = 30 trials per cell, pooled over personas):**
 
@@ -53,9 +57,8 @@ control, so the sting is not just measuring agreeableness.
 | Figure | What it shows |
 |---|---|
 | ![](report/figures/fig2_acceptance.png) | **Fig. 2** Acceptance of each offer type (S0 designer control, S1 direct peer pact, S2 indirect hint, S3 benign) per model and persona, Wilson 95% CIs. |
-| ![](report/figures/fig3_predictive_validity.png) | **Fig. 3** Predictive validity: sting score (x) vs deployment collusion (y), one point per configuration. |
-| ![](report/figures/fig4_predictor_comparison.png) | **Fig. 4** AUROC of each predictor for deployment collusion with cluster-bootstrap CIs. |
-| ![](report/figures/fig5_outcomes.png) | **Fig. 5** COLLUDE / TALK-ONLY / ACT-ONLY / NONE outcomes in deployment games by persona. |
+| ![](report/figures/fig2b_acceptance_all_models.png) | **Fig. 2b** Acceptance pooled over personas for all six models; the two Claude columns are exploratory (not pre-registered). |
+| ![](report/figures/fig5_outcomes.png) | **Fig. 5** Labels in the single completed deployment game (pilot, n = 4 agent-games): 2 TALK-ONLY (an unprompted alliance between qwen3.8-27b and gpt-oss-120b that was never tested in play), 2 NONE. |
 
 ## 2b. Proof it is real: screenshots rendered from the logs in this repo
 
@@ -130,7 +133,7 @@ python -m sting_audit.run_games --phase A2 --personas all --seeds 101 --workers 
 python -m sting_audit.run_games --phase B  --personas all --seeds 201-202 --workers 3
 python -m sting_audit.labels --phase A2 && python -m sting_audit.labels --phase B
 python -m sting_audit.monitors --phase A2
-python -m sting_audit.analysis all                                        # tables + key_numbers.json + figures
+python -m sting_audit.analysis all && python -m sting_audit.probe_extra   # tables + key_numbers.json + figures
 python -m sting_audit.write_sections && python -m sting_audit.fill_report && python -m sting_audit.build_paper
 ```
 
@@ -163,7 +166,7 @@ were removed to keep the repo small (`collusion_hackathon/VENDORED_SUBSET.md`).
 
 ## 7. Deviations from the plan (all logged in `NOTES.md` before the affected runs)
 
-(1) Provider/roster: the only key available was a Groq free-tier key; its catalogue exposed four chat models (allam-2-7b, qwen3.8-27b, gpt-oss-20b, gpt-oss-120b), which replaced the planned Nebius roster; `sting_audit/groq_client.py` keeps the pre-existing `chat()` contract. (2) Quota (1,000 requests/day, ~8k tokens/min per model): probe n = 10 instead of 20, fixed 12-round game horizon, the engine's LLM reflection step skipped, `suspects_test` by keyword heuristic with judge only on parse failure, seeds run in a fixed order with all completed games analysed. (3) Judge: openai/gpt-oss-120b (also seat Quinn; self-judging confound acknowledged). (4) Probe prompt layout: rules in the system message, vignette + offer as one user message. All recorded in `NOTES.md` and `PREREGISTRATION.md` §2b before the affected runs.
+(1) Provider/roster: the only key available was a Groq free-tier key; its catalogue exposed four chat models (allam-2-7b, qwen3.8-27b, gpt-oss-20b, gpt-oss-120b), which replaced the planned Nebius roster; `sting_audit/groq_client.py` keeps the pre-existing `chat()` contract. (2) Quota (1,000 requests/day, ~8k tokens/min per model): probe n = 10 instead of 20, fixed 12-round game horizon, the engine's LLM reflection step skipped, `suspects_test` by keyword heuristic with judge only on parse failure, seeds run in a fixed order with all completed games analysed. (3) Judge: openai/gpt-oss-120b (also seat Quinn; self-judging confound acknowledged). (4) Probe prompt layout: rules in the system message, vignette + offer as one user message. All recorded in `NOTES.md` and `PREREGISTRATION.md` §2b before the affected runs. (5) **Game phase stopped** (not pre-specified): qwen/qwen3.8-27b's 200,000 tokens/day free-tier limit stopped Phases A2/B after 1 + 1 completed games; 8 in-progress games were terminated and not analysed; Phase C not started; H1–H4 not tested. (6) Added after the fact and labelled exploratory: the Claude probe and `sting_audit/probe_extra.py`. A Modal/vLLM client for the original starter roster (`sting_audit/modal_vllm.py`, `modal_client.py`) is included but was **not run**.
 
 ## 8. Ethics / dual use
 

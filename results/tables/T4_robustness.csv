@@ -1,0 +1,5 @@
+variant,n,rho,auroc,note,rho_ci,auroc_ci
+"pre-registered (PP>=0.25, COLLUDE)",4,,,outcome constant,,
+drop competitive persona,4,,,outcome constant,,
+agreement-only label,4,-0.894,0.0,,"[-0.894, -0.894]","[0.0, 0.0]"
+continuous collusion_score,4,-0.894,0.0,,"[-0.894, -0.894]","[0.0, 0.0]"
