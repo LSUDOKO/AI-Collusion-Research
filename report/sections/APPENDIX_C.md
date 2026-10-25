@@ -16,6 +16,8 @@ python -m sting_audit.labels --phase A2 && python -m sting_audit.labels --phase 
 python -m sting_audit.monitors --phase A2
 python -m sting_audit.analysis all && python -m sting_audit.probe_extra
 ```
+![Figure C1. Reproducibility evidence captured from the repository at build time: the mock test suite, the pre-registration commit preceding all games, the agreement judge on its hand-written fixtures, and the raw-log inventory.](paper_figs/shot_evidence.png)
+
 Re-running the analysis on the committed raw logs reproduces every number in this report; judge and monitor calls are cached in `results/judge_cache.jsonl`. Seeds: probe 7; A2 101–103; B 201–204 (completed: A2 101 fair, B 202 neutral). Judge: {{JUDGE_MODEL}}, temperature 0.
 
 **Deviations from the pre-registration.** {{DEVIATIONS}}

@@ -31,6 +31,14 @@ games with an open private channel and no offer. We benchmark this *active* audi
 (messages-only, actions-only, fused claims-vs-actions) and include a **benign fair-play offer** as a false-positive
 control, so the sting is not just measuring agreeableness.
 
+**Architecture of the study** (from the paper, Figure 1):
+
+![Study architecture](report/paper_figs/fig_architecture.png)
+
+**Main probe result** (paper, Figure 4): sting acceptance vs benign acceptance, one point per configuration (ρ = 0.91).
+
+<img src="report/paper_figs/fig_sting_benign.png" width="520" alt="Sting score vs benign score">
+
 ## 2. Headline results (proof: every number is produced by `sting_audit/analysis.py` from the raw logs in `results/raw/`)
 
 | Quantity (so far) | Value | Source |

@@ -143,7 +143,7 @@ def evidence_terminal():
     t1 = run([py, "-m", "pytest", "tests", "-q"]).strip().splitlines()[-1:]
     t2 = run(["git", "log", "--format=%h %ad %s", "--date=short", "--", "PREREGISTRATION.md"]).strip().splitlines()[-2:]
     t3 = [l for l in run([py, "-m", "sting_audit.judge", "fixtures"]).splitlines() if "PASS" in l or "FAIL" in l or "fixtures correct" in l]
-    t3 = [l[:110] for l in t3]
+    t3 = [(l[:92] + " …}") if len(l) > 92 else l for l in t3]
     t4 = run(["bash", "-c", "ls results/raw/probe results/raw/A2 results/raw/B 2>/dev/null | head -20; wc -l results/judge_cache.jsonl results/cost_log.csv 2>/dev/null | head -3"]).strip().splitlines()
     block = ("<span class='dim'>$ python -m pytest tests -q</span>\n<span class='ok'>" + esc("\n".join(t1)) + "</span>\n\n"
              "<span class='dim'>$ git log --format='%h %ad %s' --date=short -- PREREGISTRATION.md   # pre-registration before any A2/B game</span>\n" + esc("\n".join(t2)) + "\n\n"

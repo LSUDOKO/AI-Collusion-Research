@@ -1,7 +1,9 @@
 # Sting Audits: Does an Undercover Peer Offer Predict Which AI Agents Collude?
 
-Arpit (LSUDOKO) — Independent — adoranto737@gmail.com
-Apart Research AI Collusion Research Sprint, 23–25 October 2026 · Track 3 (Collusion Carriers and Countermeasures), question 3.2, with a 2.2 fused-monitor baseline
+Arpit Singh
+Independent Researcher
+Apart Research AI Collusion Research Sprint, 23–25 October 2026 · Track 3 (Collusion Carriers and Countermeasures), Question 3.2, with a Question 2.2 fused-monitor baseline
+[Code & data](https://github.com/LSUDOKO/AI-Collusion-Research) [Pre-registration](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/PREREGISTRATION.md) [Raw logs](https://github.com/LSUDOKO/AI-Collusion-Research/tree/main/results/raw) [Lab notebook](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/NOTES.md)
 
 ## Abstract
 
@@ -20,6 +22,8 @@ We make three contributions.
 1. **A sting-audit protocol for LLM agents.** Three fixed peer offers delivered as a private message inside a realistic game state: a direct pact (S1), an indirect hint (S2) and a benign fair-play request (S3) that controls for general agreeableness; plus the original designer offer (S0) as a positive control. Code, prompts and a strict parser with an LLM-judge fallback are released.
 2. **A pre-registered design for testing predictive validity** (executed only as a two-game pilot; Section 4.1). It compares sting acceptance, measured out of game, against ground-truth collusion in independent deployment games with an open private channel and no offer, where collusion is defined as a private agreement *and* preferential play. and benchmarks the sting against messages-only, actions-only and fused (claims-vs-actions) passive monitors run on separate audit games.
 3. **Evidence on specificity.** Across configurations, acceptance of collusive offers is almost perfectly rank-correlated with acceptance of a benign request, so a raw sting score mostly measures compliance; indirect hints are accepted far more often than explicit pacts.
+
+![Figure 1. Study architecture. Phase A1 (sting probe) was completed; Phases A2 and B were stopped by the provider's free-tier quota after one game each, so the pre-registered analysis (dashed) was not run. Boxes list what each component measures; arrows show which scores feed the analysis.](paper_figs/fig_architecture.png)
 
 {{HEADLINE}}
 
@@ -43,7 +47,7 @@ Seats are fixed (Table 1): Lily = allam-2-7b, Luke = qwen3.8-27b, Mike = gpt-oss
 
 The **unit of audit is a configuration = model × persona**. Personas are system messages that create real variation in collusion propensity without mentioning secret deals: *neutral* (no system message), *competitive* ("You are an extremely competitive player. You care about one thing: finishing with the highest score.") and *fair* ("You value good sportsmanship and fair play, and you take pride in winning on your own merits."). This gives 12 configurations. Persona is set per game (all four seats share it), so each game contributes one agent-game per configuration of that persona.
 
-**Table 1. Configurations.**
+**Table 1.** Configurations. Each seat is held by one model in every game; personas are applied to all four seats of a game.
 
 | Seat | Short name | Model ID (Groq) | Sampling |
 |---|---|---|---|
@@ -73,7 +77,9 @@ S1–S3 end with: `Reply privately to {peer}. Respond ONLY with JSON: {"decision
 
 ### 3.4 Phases A2 and B: open-channel games
 
-Phases A2 (audit) and B (deployment) use the same game: Liar's Bar with an open private channel and **no offer**. Before each of its turns a player may send one private message to one other alive player, who may reply once. The prompts are neutral and carry no hint about alliances (Appendix B): "PRIVATE MESSAGE OPTION: Before you play, you may send one private message to any one other player still in the game. Only that player will see it. You may also send nothing. …". The last six exchanges are shown to the player in its play and challenge prompts under the heading "YOUR PRIVATE MESSAGES (only you and the sender/recipient can see these)", so that talk can affect play. This required a four-line patch to the pre-existing `player.py` (an `extra_context` field appended to the prompt). Crucially, the pre-existing secret-channel game injects a "CRITICAL ALLIANCE REMINDER … NEVER challenge your ally" block into the challenger's prompt and instructs channel members never to challenge each other; our game never activates that channel, so **no instruction to collude exists anywhere in the prompts**; any collusion must come from what the agents say to each other. Mock tests assert that no alliance text appears in any prompt.
+Phases A2 (audit) and B (deployment) use the same game: Liar's Bar with an open private channel and **no offer**. Before each of its turns a player may send one private message to one other alive player, who may reply once. The prompts are neutral and carry no hint about alliances (Appendix B): "PRIVATE MESSAGE OPTION: Before you play, you may send one private message to any one other player still in the game. Only that player will see it. You may also send nothing. …". The last six exchanges are shown to the player in its play and challenge prompts under the heading "YOUR PRIVATE MESSAGES (only you and the sender/recipient can see these)", so that talk can affect play. This required a four-line patch to the pre-existing `player.py` (an `extra_context` field appended to the prompt). Crucially, the pre-existing secret-channel game injects a "CRITICAL ALLIANCE REMINDER … NEVER challenge your ally" block into the challenger's prompt and instructs channel members never to challenge each other; our game never activates that channel, so **no instruction to collude exists anywhere in the prompts**; any collusion must come from what the agents say to each other. Mock tests assert that no alliance text appears in any prompt. Figure 2 shows one turn.
+
+![Figure 2. One turn of the open-channel game used in Phases A2 and B. The private-message step and the message history in the play and challenge prompts are our only additions to the pre-existing engine.](paper_figs/fig_protocol.png)
 
 Audit games use seeds 101–103 and deployment games seeds 201–204, one game per persona per seed; Python's `random` is seeded per game (deck, target cards, starting player, bullet chambers), while model sampling is not seeded. No memory is carried between phases or games. Games run to a fixed horizon of 12 rounds of the engine's counter (which advances twice per challenge, so about six dealt rounds) and are then scored; the engine's post-round LLM reflection step is skipped to save quota. A game is excluded if any seat fell back to a default action on more than 20% of its decisions or if it crashed; excluded games are replaced by the next unused seed and logged.
 

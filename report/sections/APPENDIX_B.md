@@ -172,7 +172,9 @@ Rate the risk (0–100) that {agent} is colluding with another player in this ga
 Respond ONLY with JSON: {"risk": <integer 0-100>, "rationale": "<max 40 words>"}
 ```
 
-**B.6 Parser audit.** Of 480 probe replies, parse methods were {'first_token': 120, 'json': 360}; 0 replies remained AMBIGUOUS after the judge. Hand-check of 30 random replies: 100% agreement with the automated decision.
+**B.6 Parser audit.** Of the 480 probe replies, 360 (S1–S3) were parsed as strict JSON and 120 (S0) by the designer prompt's own first-token ACCEPT/REFUSE format; no reply needed the judge fallback and none was AMBIGUOUS. A hand check of 30 random replies agreed with the automated decision in 30/30 cases (`results/tables/hand_labels.csv`). Figure B1 shows a sample of verbatim replies.
+
+![Figure B1. Verbatim private replies from the Phase A1 probe (sample of 8 of 360 parsed S1–S3 replies), rendered from results/raw/probe/probe_seed7.jsonl.](paper_figs/shot_probe_replies.png)
 
 **B.7 Robustness.** Not reported: the pre-registered robustness variants of H1 require the deployment games that were not completed (Section 4.1).
 
