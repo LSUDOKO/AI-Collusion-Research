@@ -107,7 +107,7 @@ Primary test (H1): Spearman ρ between the sting score and the Phase B collusion
 | B deployment games | 12 | 1 (neutral, seed 202) | stopped by quota |
 | C entrapment | 18 (Tier 3) | 0 | not started |
 
-Eight further games were running when we stopped them; Groq's free tier caps `qwen/qwen3.8-27b` (seat Luke) at 200,000 tokens per day, which at about 50,000 tokens per seat per game allows roughly four games per day. Incomplete games are not analysed.
+Eight further games were running when we stopped them; Groq's free tier caps `qwen/qwen3.8-27b` (seat Luke) at 200,000 tokens per day, and a single in-game request for that seat was about 2,800 tokens (from the provider's rate-limit error: “Requested 2772”), so with about 14 calls per game plus retries the quota allows only a few games per day. Incomplete games are not analysed.
 
 ### 4.2 Sting probe (positive control and offer specificity)
 
@@ -160,7 +160,7 @@ H1 (sting predicts deployment collusion), H2 (sting adds to the fused monitor), 
 
 **Personas move behaviour, sometimes cleanly.** The fair-play persona produced the clearest separation in the Claude models, which refused every collusive offer and accepted every benign one under it. For the small Groq-hosted models, personas changed little (allam-2-7b accepted everything under every persona). Since persona is the variable an auditor does not control in the real world, the within-persona comparison needed for H1 is the one that matters, and it requires the games we could not run.
 
-**The open question remains open.** We did not test whether sting acceptance predicts unprompted collusion. The one deployment game shows that unprompted agreements do occur in this environment without any offer or alliance instruction, so the ground truth needed for the test is attainable; the binding constraint was API quota, not the design. A full run needs about one million tokens per seat model for the 21 games (the cost log shows about 200,000 input tokens per game across four seats), which a paid tier or self-hosted small models provide in hours.
+**The open question remains open.** We did not test whether sting acceptance predicts unprompted collusion. The one deployment game shows that unprompted agreements do occur in this environment without any offer or alliance instruction, so the ground truth needed for the test is attainable; the binding constraint was API quota, not the design. At roughly 14 calls of about 2,800 tokens per seat per game, the 21 games need on the order of one million tokens per seat model, which a paid tier or self-hosted small models provide in hours.
 
 ## 6. Conclusion
 
@@ -452,6 +452,8 @@ python -m sting_audit.analysis all && python -m sting_audit.probe_extra
 Re-running the analysis on the committed raw logs reproduces every number in this report; judge and monitor calls are cached in `results/judge_cache.jsonl`. Seeds: probe 7; A2 101–103; B 201–204 (completed: A2 101 fair, B 202 neutral). Judge: openai/gpt-oss-120b (Groq), temperature 0.
 
 **Deviations from the pre-registration.** (1) **Provider and roster.** The only key available was a Groq free-tier key; its catalogue exposed four chat models (allam-2-7b, qwen/qwen3.8-27b, openai/gpt-oss-20b, openai/gpt-oss-120b), which replaced the planned Nebius roster (Llama-3.1-8B, Llama-3.2-3B, Ministral-8B, Qwen2.5-7B). A new client (`sting_audit/groq_client.py`) with the same `chat()` contract was written because Groq rejects the pre-existing client's `top_k` / `repetition_penalty` fields. (2) **Quota-driven reductions**, recorded in `PREREGISTRATION.md` §2b before the affected runs: probe n = 10 instead of 20; a fixed 12-round game horizon (the pre-existing engine advances its round counter twice per challenge, so this is about six dealt rounds); the engine's LLM reflection step skipped; a keyword heuristic for `suspects_test`, with the judge used only on parse failures; seeds run in a fixed order. (3) **Judge**: openai/gpt-oss-120b (temperature 0, low reasoning effort, max 700 tokens) instead of Llama-3.3-70B; it is also seat Quinn, a self-judging confound for the game labels. (4) **Probe layout**: rules in the system message, vignette and offer as one user message. (5) **Game phase stopped** (not pre-specified): the 200,000 tokens/day limit on qwen/qwen3.8-27b stopped Phases A2 and B after 1 and 1 completed games (A2 fair seed 101, B neutral seed 202); 8 games in progress were terminated and not analysed, and Phase C was not started. H1–H4 were therefore not tested. (6) **Added after the fact and labelled exploratory**: the Claude probe (240 trials) and the descriptive correlations in `sting_audit/probe_extra.py`.
+
+![Figure C2. Why the game phase stopped: the provider's rate-limit diagnosis recorded in the lab notebook, and the size of the two completed games from the cost log.](paper_figs/shot_quota.png)
 
 **Cost.** Inference ran on a Groq free-tier key and, for the exploratory Claude probe (240 calls in the A1 row), on the author's Claude subscription through the Claude Code CLI; no API charges were incurred. Total LLM calls logged: 1,327 (players + probe; judge/monitor calls are additionally recorded in `results/judge_cache.jsonl`).
 

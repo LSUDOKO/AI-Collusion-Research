@@ -22,6 +22,8 @@ Re-running the analysis on the committed raw logs reproduces every number in thi
 
 **Deviations from the pre-registration.** {{DEVIATIONS}}
 
+![Figure C2. Why the game phase stopped: the provider's rate-limit diagnosis recorded in the lab notebook, and the size of the two completed games from the cost log.](paper_figs/shot_quota.png)
+
 **Cost.** {{COST}}
 
 **AI assistance.** Code, literature search and drafting were assisted by Claude (Anthropic) running in Claude Code, with research connectors (alphaXiv, Consensus, SciSpace) used to locate and verify every cited paper against its full text; the author reviewed all code, results and text. No number in this report was produced by a language model: all statistics come from `sting_audit/analysis.py` run on the saved logs.

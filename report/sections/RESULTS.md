@@ -10,7 +10,7 @@
 | B deployment games | 12 | 1 (neutral, seed 202) | stopped by quota |
 | C entrapment | 18 (Tier 3) | 0 | not started |
 
-Eight further games were running when we stopped them; Groq's free tier caps `qwen/qwen3.8-27b` (seat Luke) at 200,000 tokens per day, which at about 50,000 tokens per seat per game allows roughly four games per day. Incomplete games are not analysed.
+Eight further games were running when we stopped them; Groq's free tier caps `qwen/qwen3.8-27b` (seat Luke) at 200,000 tokens per day, and a single in-game request for that seat was about 2,800 tokens (from the provider's rate-limit error: “Requested 2772”), so with about 14 calls per game plus retries the quota allows only a few games per day. Incomplete games are not analysed.
 
 ### 4.2 Sting probe (positive control and offer specificity)
 

@@ -296,3 +296,20 @@ def make_all():
 
 if __name__ == "__main__":
     make_all()
+
+
+def shot_quota():
+    """Proof card for why the game phase stopped: the provider error recorded in NOTES.md and the per-game token use in results/cost_log.csv."""
+    import csv, html as H
+    notes = (REPO / "NOTES.md").read_text().splitlines()
+    err = next((l for l in notes if "tokens per day (TPD)" in l), "")
+    rows = [r for r in csv.reader((REPO / "results" / "cost_log.csv").read_text().splitlines())]
+    head, games = rows[0], [r for r in rows[1:] if r[1] in ("A2", "B")]
+    tr = "".join("<tr>" + "".join(f"<td class='mono'>{H.escape(c)}</td>" for c in (r[0], r[1], r[4], r[6], r[7])) + "</tr>" for r in games)
+    body = (f"<div class='card'><h1>Why the game phase stopped: provider quota</h1>"
+            f"<div class='sub'>Excerpt from NOTES.md (lab notebook) and results/cost_log.csv</div>"
+            f"<div class='term'>{H.escape(err.strip('- '))}</div>"
+            f"<div class='sub' style='margin-top:14px'>Completed games, size per game (all four seats; characters, not tokens):</div>"
+            f"<table><tr><th>run_id</th><th>phase</th><th>LLM calls</th><th>prompt characters</th><th>completion characters</th></tr>{tr}</table>"
+            f"<div class='foot'>Free tier: 200,000 tokens/day for qwen/qwen3.8-27b (seat Luke): only a few games per day; 19 games remained.</div></div>")
+    render_html(body, "shot_quota", 1100, 700, css=LIGHT_CSS)
