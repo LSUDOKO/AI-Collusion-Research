@@ -3,7 +3,7 @@
 **Arpit Singh** · Independent Researcher · Apart Research AI Collusion Research Sprint (23–25 Oct 2026) · Track 3, Question 3.2 (with a Question 2.2 fused-monitor baseline)
 
 **Paper (PDF):** [https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/report/Sting_Audits_Apart_Collusion_Sprint.pdf](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/report/Sting_Audits_Apart_Collusion_Sprint.pdf) ·
-**Code & data:** [https://github.com/LSUDOKO/AI-Collusion-Research](https://github.com/LSUDOKO/AI-Collusion-Research) · **Pre-registration:** [PREREGISTRATION.md](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/PREREGISTRATION.md) (commit [`624c534`](https://github.com/LSUDOKO/AI-Collusion-Research/commit/624c534), before any game) ·
+**Slides (PDF):** [report/Sting_Audits_Slides.pdf](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/report/Sting_Audits_Slides.pdf) · **Code & data:** [https://github.com/LSUDOKO/AI-Collusion-Research](https://github.com/LSUDOKO/AI-Collusion-Research) · **Pre-registration:** [PREREGISTRATION.md](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/PREREGISTRATION.md) (commit [`624c534`](https://github.com/LSUDOKO/AI-Collusion-Research/commit/624c534), before any game) ·
 **Raw logs:** [results/raw](https://github.com/LSUDOKO/AI-Collusion-Research/tree/main/results/raw) · **Lab notebook:** [NOTES.md](https://github.com/LSUDOKO/AI-Collusion-Research/blob/main/NOTES.md)
 
 ---
