@@ -47,3 +47,4 @@ All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:3
   S3 0/3 all REFUSE with strict JSON parse (0 judge fallbacks). Bug fixed before the pilot: `str.format` on prompt
   templates containing JSON braces → replaced by `paths.fill()`; `--out` now resolved before `enter_lb()` chdir.
 - 18:10 Full A1 probe launched (4 models × 3 personas × 4 offers × n=10 = 480 trials, seed 7, 8 workers) → results/raw/probe/probe_seed7.jsonl, log results/logs/probe.out.
+- 17:39 Pre-registration committed (624c534) and pushed to https://github.com/LSUDOKO/AI-Collusion-Research. Launched Phase A2 seed 101 (3 games, workers 3; first game doubles as the real pilot — transcript to be read before launching B).

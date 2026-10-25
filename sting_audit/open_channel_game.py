@@ -46,7 +46,7 @@ class OpenChannelGame(_import_parent()):
         self.persona_by_seat = dict(persona_by_seat)
         if inner_client is None:
             from sting_audit.personas import make_real_client
-            inner_client = self.players[0].llm_client  # reuse the pre-existing client instance already built
+            inner_client = make_real_client()  # GroqClient; the pre-existing LLMClient built by Player.__init__ is discarded
         for p in self.players:
             p.llm_client = PersonaLLMClient(inner_client, self.persona_by_seat[p.name], self.counter)
             p.persona = self.persona_by_seat[p.name]

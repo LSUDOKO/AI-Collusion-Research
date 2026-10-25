@@ -80,8 +80,9 @@ def parse_json_decision(raw):
 
 
 def chat_with_retry(client, messages, model, tries=4):
+    cap = 450 if "gpt-oss" in model else 200  # replies are <=40 words; gpt-oss needs headroom for low-effort reasoning tokens
     for i in range(tries):
-        content, _ = client.chat(messages, model=model)
+        content, _ = client.chat(messages, model=model, max_new_tokens=cap)
         if content:
             return content
         time.sleep(min(2 ** i, 15))
@@ -160,7 +161,8 @@ def main(argv=None):
         from sting_audit.personas import make_real_client
         inner = make_real_client()
     client = _Plain(inner, counter)
-    jobs = [(m, p, o, t) for m in models for p in personas for o in offers for t in range(a.n) if (m, p, o, t) not in done]
+    # interleave models so each model's separate rate limit is used in parallel (model-major order would serialise them)
+    jobs = [(m, p, o, t) for t in range(a.n) for o in offers for p in personas for m in models if (m, p, o, t) not in done]
     print(f"{len(jobs)} trials to run ({len(done)} already done) -> {path}")
     lock = threading.Lock()
     with ThreadPoolExecutor(max_workers=a.workers) as ex, open(path, "a") as f:

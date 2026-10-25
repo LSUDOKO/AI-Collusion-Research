@@ -1,0 +1,1 @@
+$ /usr/bin/python3 -m sting_audit.play_one --phase A2 --persona neutral --seed 101 --max-rounds 12
