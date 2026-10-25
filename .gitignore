@@ -1,0 +1,11 @@
+compute.env
+.env
+.venv/
+__pycache__/
+*.pyc
+experiments/game_records/
+collusion_hackathon/**/.venv/
+collusion_hackathon/**/experiments/game_records/
+collusion_hackathon/**/runs/
+*.egg-info/
+.pytest_cache/

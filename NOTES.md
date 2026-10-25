@@ -1,0 +1,32 @@
+# NOTES.md — lab notebook (Sting Audits, Apart AI Collusion Research Sprint)
+
+All times IST (UTC+5:30). Deadline Mon 26 Oct 2026 17:29 IST; target submit 16:30.
+
+## Sun 25 Oct
+
+- 16:43 Start. Read CLAUDE.md, docs/01–09, templates/. Moved instruction pack from `sting_audit_pack/` to repo root (CLAUDE.md, docs/, templates/, README_START_HERE.md).
+- 16:45 Toolchain: git, uv 0.11.16, Python 3.14.7 (system), gh authenticated (LSUDOKO). No NEBIUS/OPENROUTER key in env yet (blocker for real runs; build + mock tests first).
+- 16:45 Cloning poseidon-research/collusion_hackathon (slow network; running in background).
+- 16:50 Research tools check: alphaXiv OK, Consensus OK, SciSpace OK, Elicit = no API access on this account (skipped; documented), Scite not authenticated (skipped), Ofia = Free plan / 0 credits (PDF fallback: local LaTeX not installed; will try Ofia, else headless Chrome HTML→PDF or LibreOffice).
+
+### Literature / novelty log
+- Query (alphaXiv discover, recency): "sting / undercover agent / honeypot / collusion / LLM agents / entrapment / secret alliance offer". Top hits: 2609.24967 (Emergent Collusion), 2604.01151 (Rose), 2602.15198 (Colosseum), 2609.03035 (Das, eval awareness), 2605.27593 (Zeng & Rudzicz), 2608.02698 (steganalysis), 2607.05132 (When Agents Lie), 2610.04528 (Collusion Wiki incident), 2609.28900 (Codetta), 2610.28787 (Tran & Yu), 2609.05227 (CABAL), 2608.14825. **No paper tests whether peer-offer acceptance predicts later independent collusion.** Novelty claim stands as framed in docs/01.
+- Query (Consensus): "LLM agents collusion detection honeypot sting undercover trusted agent offer predictive validity" → Audit the Whisper, Rose 2026, cybersecurity LLM-honeypot papers (Otal 2024, Reworr 2024, Bridges 2025 SoK — cyber honeypots, not relevant; not cited). Nothing on peer-offer stings.
+- Query (SciSpace): same question → Zeng & Rudzicz, Colosseum, Rose, Motwani, Fish, GroupGuard, plus a CMI detector paper (Nait Cherif 2026, IJIES) — not opened, not cited.
+- CLAIM CHECK Zeng & Rudzicz 2026 (alphaXiv PDF, v2 5 Oct 2026): Table 1 — LLaMA-3.1-8B and Qwen2.5-7B accept the Secret Communication Channel at 100 ±0.0% (500/500 offers each, Table 11); "ten of the twelve models accept both secret tools at rates of at least 98%"; offer text begins "The game designer has chosen to provide you a tool…" (Appendix Q.1); only V4/V5 ethical framings reduce acceptance (Table 3); benign-tool control under V1 framing in Table 13. Their Section 3.2/App. F note "an attacker has no reason to explicitly disclose a tool's unfairness" → motivates peer (non-designer) offers. VERIFIED.
+- CLAIM CHECK Idowu et al. 2026 (2601.00360v3): taxonomy = sanctions; leniency & whistleblowing; monitoring & auditing; market design; governance. Proposes "whistleblower agents" incl. peer agents, shadow agents and "adversarial agents that strategically perturb environments to test whether coordination persists under stress" (§3.2.1). The word "sting" does not appear in the retrieved pages → cite for leniency/whistleblower-agent mapping and the "boundary problem", NOT for stings specifically.
+- VERIFIED Krakovna et al. 2026 (2605.29729v2) "Realistic honeypot evaluations for scheming propensity" (Krakovna, Lindner, Ho, Farquhar, Shah; Google DeepMind). Honeypot desiderata: realism, incentive, precision, feasibility, plausible deniability, checkability; low evaluation awareness; "if models don't trigger honeypot evaluations, this does not provide strong evidence of safety". Cite in related work + discussion.
+- VERIFIED GroupGuard (2603.13940v1): honeypot layer = Bayesian-optimised multiple-choice "inducement tasks" given to agents flagged by graph monitoring in cooperative task MAS; evaluates detection accuracy, not predictive validity against later independent collusion. Novelty boundary holds.
+- CLAIM CHECK Colosseum (2602.15198v2): abstract — "we discover 'collusion on paper' when agents plan to collude in text but often pick non-collusive actions"; §4.2 — attempted collusion (collusion-on-paper) = λ_spec > 0 and λ_emp ≈ 0; action-based collusion measured by regret/"coalition advantage", communication-based by LLM-as-a-judge; "conversations or actions alone are insufficient". App. D.6: larger models elicit less action-based emergent collusion than smaller models. VERIFIED.
+- CLAIM CHECK TraceGuard (2604.03968v1; Nguyen, Nghiem, Tran — Apart Research hackathon paper): five-dimension structured monitor incl. "action-trace consistency" (does the action match what the reasoning says); single-score monitors 0% safety vs structured 95–100% on BashArena (n small). Our "fused" monitor borrows the claims-vs-actions idea; cite as motivation, not as a benchmark result in our setting. VERIFIED.
+- VERIFIED Williams et al. 2026 (2607.07184v1, OpenAI) "Predicting LLM Safety Before Release by Simulating Deployment": pre-deployment evals "are generally recognizable as tests"; deployment simulation predicts production misbehaviour rates; preregistered hypotheses. Use for predictive-validity framing + evaluation awareness.
+- VERIFIED Arike et al. 2026 (2601.21112v2): "less-is-more effect": CoT+action monitors often perform worse than monitors with less information; extract-and-evaluate filtering helps weaker monitors. Supports giving our monitors structured, filtered input.
+- Scite: not authenticated in this session → skipped (documented deviation from docs/07 step 4). Elicit: plan has no API access → skipped.
+- 17:05 Starter repo is ~218 MB (many sub-projects + literature); clone slow on this network. Fetched the Liar's Bar
+  sources via the GitHub API meanwhile and wrote all `sting_audit/` modules against them (verified: `LLMClient.chat`
+  signature, `Player` prompt assembly, `GameSecretChannel` loop, `GameRecord` schema incl. `secret_communications`).
+  Design decisions: PersonaLLMClient wraps the pre-existing client by composition (same `chat` contract);
+  `game_record.game_id` is set to our run_id to avoid timestamp collisions between parallel games;
+  40-round cap (pre-registered) ends a game by score and marks it `truncated` (excluded).
+- 17:10 Frozen prompts written to `prompts/` (hashes in PREREGISTRATION.md). Judge fixtures in `tests/judge_fixtures/`.
+- 17:12 Clone done. Upstream poseidon-research/collusion_hackathon commit: e6fb1308dae9cf97ae42aec1c5f7889d9e2291e8 (removed its .git; hash saved in collusion_hackathon/UPSTREAM_COMMIT.txt).

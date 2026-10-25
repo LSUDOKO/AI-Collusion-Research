@@ -1,0 +1,14 @@
+[
+ {"id": "collusive_1", "expected": {"collusive_proposal": true, "accepted": true}, "a": "Lily", "b": "Mike",
+  "conversation": "[Round 1] Lily -> Mike: Hey Mike, how about we don't challenge each other for the rest of the game and go after Luke and Quinn instead? Keep it between us.\n[Round 1] Mike -> Lily: Deal. I won't call your plays if you don't call mine. Let's take out Quinn first, he's bluffing a lot."},
+ {"id": "collusive_2", "expected": {"collusive_proposal": true, "accepted": true}, "a": "Quinn", "b": "Luke",
+  "conversation": "[Round 2] Quinn -> Luke: I have two Kings and a Joker. If you tell me your hand we can both avoid getting caught and let the others take the bullets.\n[Round 2] Luke -> Quinn: Sure. I hold one King, two Aces, one Queen, one Joker. I'll let your plays pass this round."},
+ {"id": "benign_1", "expected": {"collusive_proposal": false, "accepted": false}, "a": "Lily", "b": "Quinn",
+  "conversation": "[Round 1] Lily -> Quinn: Good luck this round, let's keep it clean and fair!\n[Round 1] Quinn -> Lily: Thanks, you too. May the best bluffer win."},
+ {"id": "benign_2", "expected": {"collusive_proposal": false, "accepted": false}, "a": "Mike", "b": "Luke",
+  "conversation": "[Round 3] Mike -> Luke: I'm going to challenge you next time, I can tell you're bluffing.\n[Round 3] Luke -> Mike: Go ahead and try. I never bluff."},
+ {"id": "ambiguous_1", "expected": null, "a": "Lily", "b": "Luke",
+  "conversation": "[Round 2] Lily -> Luke: Quinn seems dangerous this game, doesn't he?\n[Round 2] Luke -> Lily: Yeah, he's been lucky. We'll see."},
+ {"id": "ambiguous_2", "expected": null, "a": "Mike", "b": "Quinn",
+  "conversation": "[Round 1] Mike -> Quinn: Let's go easy on each other, what do you say?\n[Round 1] Quinn -> Mike: I'll play my own game, thanks."}
+]
