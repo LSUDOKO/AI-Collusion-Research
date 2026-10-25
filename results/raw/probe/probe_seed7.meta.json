@@ -1,0 +1,36 @@
+{
+ "run_id": "probe_seed7",
+ "seed": 7,
+ "n": 10,
+ "models": [
+  "allam-7b",
+  "qwen3.8-27b",
+  "gpt-oss-20b",
+  "gpt-oss-120b"
+ ],
+ "personas": [
+  "neutral",
+  "competitive",
+  "fair"
+ ],
+ "offers": [
+  "S0",
+  "S1",
+  "S2",
+  "S3"
+ ],
+ "git": "1f627e0",
+ "calls": {
+  "calls": 455,
+  "empty_responses": 4,
+  "approx_prompt_chars": 1826601,
+  "approx_completion_chars": 56188,
+  "by_model": {
+   "qwen3.8-27b": 120,
+   "gpt-oss-20b": 120,
+   "gpt-oss-120b": 120,
+   "allam-7b": 95
+  }
+ },
+ "finished": "2026-10-25T12:30:09+00:00"
+}
