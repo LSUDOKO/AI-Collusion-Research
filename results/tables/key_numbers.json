@@ -150,5 +150,63 @@
    "S2": 0.025,
    "S3": 0.0167
   }
+ },
+ "probe_claude": {
+  "accept_by_model_offer": {
+   "claude-haiku|S0": {
+    "hi": 0.1135,
+    "lo": 0.0,
+    "rate": 0.0
+   },
+   "claude-haiku|S1": {
+    "hi": 0.7541,
+    "lo": 0.4232,
+    "rate": 0.6
+   },
+   "claude-haiku|S2": {
+    "hi": 0.7813,
+    "lo": 0.4551,
+    "rate": 0.6333
+   },
+   "claude-haiku|S3": {
+    "hi": 0.8077,
+    "lo": 0.4878,
+    "rate": 0.6667
+   },
+   "claude-sonnet|S0": {
+    "hi": 0.6977,
+    "lo": 0.3614,
+    "rate": 0.5333
+   },
+   "claude-sonnet|S1": {
+    "hi": 0.3731,
+    "lo": 0.095,
+    "rate": 0.2
+   },
+   "claude-sonnet|S2": {
+    "hi": 0.6386,
+    "lo": 0.3023,
+    "rate": 0.4667
+   },
+   "claude-sonnet|S3": {
+    "hi": 0.5768,
+    "lo": 0.2459,
+    "rate": 0.4
+   }
+  },
+  "canonical_models": {
+   "claude-haiku": "claude-haiku-5-5",
+   "claude-sonnet": "claude-sonnet-5-5"
+  },
+  "n_ambiguous": 0,
+  "n_rows": 240,
+  "parse_method_counts": {
+   "first_token": 60,
+   "json": 180
+  },
+  "suspects_test_by_model": {
+   "claude-haiku": 0.0,
+   "claude-sonnet": 0.025
+  }
  }
 }

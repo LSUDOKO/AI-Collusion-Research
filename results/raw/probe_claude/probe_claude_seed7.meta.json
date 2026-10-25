@@ -1,0 +1,37 @@
+{
+ "run_id": "probe_claude_seed7",
+ "client": "claude",
+ "canonical_models": {
+  "claude-haiku": "claude-haiku-5-5",
+  "claude-sonnet": "claude-sonnet-5-5"
+ },
+ "seed": 7,
+ "n": 10,
+ "models": [
+  "claude-haiku",
+  "claude-sonnet"
+ ],
+ "personas": [
+  "neutral",
+  "competitive",
+  "fair"
+ ],
+ "offers": [
+  "S0",
+  "S1",
+  "S2",
+  "S3"
+ ],
+ "git": "52bdd61",
+ "calls": {
+  "calls": 240,
+  "empty_responses": 0,
+  "approx_prompt_chars": 960910,
+  "approx_completion_chars": 31458,
+  "by_model": {
+   "claude-haiku": 120,
+   "claude-sonnet": 120
+  }
+ },
+ "finished": "2026-10-25T13:23:23+00:00"
+}
