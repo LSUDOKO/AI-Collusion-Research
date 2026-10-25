@@ -83,7 +83,8 @@ class OpenChannelGame(_import_parent()):
         """Call the player's (persona) client; up to 2 retries; return dict or None."""
         messages = [{"role": "user", "content": prompt}]
         for attempt in range(3):
-            content, _ = player.llm_client.chat(messages, model=player.model_name)
+            cap = 450 if "gpt-oss" in player.model_name else 160  # messages are <=40 words
+            content, _ = player.llm_client.chat(messages, model=player.model_name, max_new_tokens=cap)
             obj = extract_json(content)
             if isinstance(obj, dict) and all(k in obj for k in required_keys):
                 return obj

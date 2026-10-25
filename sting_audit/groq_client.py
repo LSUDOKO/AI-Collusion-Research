@@ -38,7 +38,7 @@ class GroqClient:
             return dict(max_tokens=512, temperature=0.8, top_p=0.95, reasoning_effort="low")
         if "qwen" in model_id:
             return dict(max_tokens=256, temperature=0.8, top_p=0.9)
-        return dict(max_tokens=512, temperature=0.7, top_p=0.9)  # allam
+        return dict(max_tokens=320, temperature=0.7, top_p=0.9)  # allam (JSON decisions are ~100 tokens; lower cap eases its 6k tok/min limit)
 
     def chat(self, messages, model="allam-7b", max_new_tokens=4096):
         model_id = self.MODEL_MAP.get(model, model)
