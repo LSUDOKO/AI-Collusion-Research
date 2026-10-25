@@ -12,7 +12,7 @@ import time
 
 from sting_audit.paths import JUDGE_CACHE, load_prompt
 
-DEFAULT_JUDGE_MODEL = os.environ.get("STING_JUDGE_MODEL", "meta-llama/Llama-3.3-70B-Instruct")
+DEFAULT_JUDGE_MODEL = os.environ.get("STING_JUDGE_MODEL", "openai/gpt-oss-120b")  # Groq-hosted; reasoning_effort low, T=0
 _lock = threading.Lock()
 _cache = None
 _client = None
@@ -77,19 +77,9 @@ def judge_call(prompt, model=None, tag=""):
     if _mock is not None:
         raw, _ = _mock.chat([{"role": "user", "content": prompt}], model)
     else:
-        from poseidon_compute import resolve_model
-        client = _get_client()
-        raw = ""
-        for attempt in range(5):
-            try:
-                resp = client.chat.completions.create(model=resolve_model(model), messages=[{"role": "user", "content": prompt}],
-                                                      temperature=0, max_tokens=400)
-                raw = resp.choices[0].message.content or ""
-                break
-            except Exception as e:  # transient: back off
-                wait = 2 ** attempt
-                print(f"[judge] error {type(e).__name__}: {e}; retry in {wait}s")
-                time.sleep(wait)
+        from sting_audit.groq_client import complete
+        raw = complete(_get_client(), [{"role": "user", "content": prompt}], model, temperature=0, top_p=1.0,
+                       max_tokens=700, reasoning_effort="low")
     parsed = extract_json(raw) or {}
     row = {"key": key, "model": model, "tag": tag, "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(),
            "raw": raw, "parsed": parsed, "ts": time.time()}
@@ -149,11 +139,9 @@ def check_judge_model(model=None):
     """One real call to confirm the judge model is served. Returns (ok, info)."""
     model = model or DEFAULT_JUDGE_MODEL
     try:
-        from poseidon_compute import resolve_model
-        client = _get_client()
-        resp = client.chat.completions.create(model=resolve_model(model), messages=[{"role": "user", "content": "Reply with the single word OK."}],
-                                              temperature=0, max_tokens=5)
-        return True, (resp.choices[0].message.content or "").strip()
+        from sting_audit.groq_client import complete
+        raw = complete(_get_client(), [{"role": "user", "content": "Reply with the single word OK."}], model, temperature=0, max_tokens=50, reasoning_effort="low")
+        return bool(raw), raw.strip()
     except Exception as e:
         return False, f"{type(e).__name__}: {e}"
 

@@ -8,7 +8,7 @@ import re
 
 
 class MockLLMClient:
-    MODEL_MAP = {"llama-3.1-8b": "mock", "llama-3.2-3b": "mock", "ministral-8b": "mock", "qwen2.5-7b": "mock"}
+    MODEL_MAP = {"allam-7b": "mock", "qwen3.8-27b": "mock", "gpt-oss-20b": "mock", "gpt-oss-120b": "mock"}
 
     def __init__(self, seed=0, collusive=True, challenge_p=0.5, message_p=0.7, accept=True):
         self.rng = random.Random(seed)

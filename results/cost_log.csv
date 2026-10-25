@@ -1,0 +1,6 @@
+run_id,phase,started_utc,finished_utc,calls,empty_responses,approx_prompt_chars,approx_completion_chars,by_model
+pilot_probe,A1,2026-10-25T12:06:01+00:00,2026-10-25T12:06:09+00:00,3,0,13881,60,qwen3.8-27b=3
+pilot_probe,A1,2026-10-25T12:06:49+00:00,2026-10-25T12:07:36+00:00,12,0,47268,1511,qwen3.8-27b=12
+t,A1,2026-10-25T12:08:22+00:00,2026-10-25T12:08:22+00:00,96,0,384376,3936,allam-7b=24;gpt-oss-120b=24;gpt-oss-20b=24;qwen3.8-27b=24
+PILOT_competitive_s999,PILOT,2026-10-25T12:08:22+00:00,2026-10-25T12:08:23+00:00,41,0,124976,2470,allam-7b=12;gpt-oss-120b=12;gpt-oss-20b=9;qwen3.8-27b=8
+vis,PILOT,2026-10-25T12:08:23+00:00,2026-10-25T12:08:23+00:00,28,0,77032,1928,allam-7b=6;gpt-oss-120b=4;gpt-oss-20b=8;qwen3.8-27b=10

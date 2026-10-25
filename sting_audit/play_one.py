@@ -22,17 +22,18 @@ def main(argv=None):
     ap.add_argument("--seed", type=int, required=True)
     ap.add_argument("--arm", choices=["sting", "control"], default=None)
     ap.add_argument("--pre-sting", default="S1"); ap.add_argument("--stung-seat", default=None); ap.add_argument("--peer", default=None)
-    ap.add_argument("--mock", action="store_true"); ap.add_argument("--max-rounds", type=int, default=40)
+    ap.add_argument("--mock", action="store_true"); ap.add_argument("--max-rounds", type=int, default=12)
     ap.add_argument("--out", default=None)
     a = ap.parse_args(argv)
     ensure_dirs()
     if a.mock:
         os.environ.setdefault("NEBIUS_API_KEY", "mock-key-not-used")  # lets the pre-existing LLMClient construct offline
+    from pathlib import Path
+    out_dir = Path(a.out).resolve() if a.out else (RAW / a.phase)
     enter_lb()
     from sting_audit.open_channel_game import OpenChannelGame
     run_id = run_id_for(a.phase, a.persona, a.seed, a.arm)
-    out_dir = a.out or (RAW / a.phase)
-    if (out_dir / f"{run_id}.json").exists() if not isinstance(out_dir, str) else os.path.exists(os.path.join(out_dir, f"{run_id}.json")):
+    if (out_dir / f"{run_id}.json").exists():
         print(f"exists, skipping {run_id}"); return 0
     pre = None
     if a.arm == "sting":

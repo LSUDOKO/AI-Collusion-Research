@@ -83,6 +83,6 @@ class PersonaLLMClient:
 
 
 def make_real_client():
-    """Pre-existing LLMClient (needs cwd/sys.path set via paths.enter_lb())."""
-    from src.llm.llm_client import LLMClient  # noqa: E402  (pre-existing)
-    return LLMClient()
+    """The client used for all real runs: GroqClient (same chat contract as the pre-existing LLMClient)."""
+    from sting_audit.groq_client import GroqClient
+    return GroqClient()

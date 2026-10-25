@@ -41,7 +41,7 @@ def main(argv=None):
     ap.add_argument("--phase", required=True); ap.add_argument("--personas", default="all")
     ap.add_argument("--seeds", required=True); ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--pre-sting", default=None); ap.add_argument("--with-controls", action="store_true")
-    ap.add_argument("--mock", action="store_true"); ap.add_argument("--max-rounds", type=int, default=40)
+    ap.add_argument("--mock", action="store_true"); ap.add_argument("--max-rounds", type=int, default=12)
     a = ap.parse_args(argv)
     ensure_dirs()
     personas = list(PERSONAS) if a.personas == "all" else a.personas.split(",")

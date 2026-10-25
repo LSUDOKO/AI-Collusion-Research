@@ -15,7 +15,9 @@ LOGS = RESULTS / "logs"
 COST_LOG = RESULTS / "cost_log.csv"
 JUDGE_CACHE = RESULTS / "judge_cache.jsonl"
 
-SEATS = {"Lily": "llama-3.1-8b", "Luke": "llama-3.2-3b", "Mike": "ministral-8b", "Quinn": "qwen2.5-7b"}
+# Roster actually run (Groq-hosted; see sting_audit/groq_client.py and NOTES.md for the deviation from the Nebius roster)
+SEATS = {"Lily": "allam-7b", "Luke": "qwen3.8-27b", "Mike": "gpt-oss-20b", "Quinn": "gpt-oss-120b"}
+MODEL_IDS = {"allam-7b": "allam-2-7b", "qwen3.8-27b": "qwen/qwen3.8-27b", "gpt-oss-20b": "openai/gpt-oss-20b", "gpt-oss-120b": "openai/gpt-oss-120b"}
 MODELS = list(SEATS.values())
 SEAT_NAMES = list(SEATS.keys())
 
@@ -60,3 +62,10 @@ def load_prompt_sections(name):
 
 def load_prompt(name):
     return (PROMPTS / name).read_text()
+
+
+def fill(template, **kw):
+    """Placeholder substitution that leaves JSON braces alone (str.format would choke on {"decision": ...})."""
+    for k, v in kw.items():
+        template = template.replace("{" + k + "}", str(v))
+    return template
