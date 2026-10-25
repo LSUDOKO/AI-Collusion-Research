@@ -4,6 +4,7 @@ python -m sting_audit.run_games --phase B --personas all --seeds 201-204 --worke
 python -m sting_audit.run_games --phase C --personas all --seeds 301-303 --workers 4 --pre-sting S1 --with-controls
 """
 import argparse
+import os
 import random
 import subprocess
 import sys
@@ -32,7 +33,8 @@ def run_one(args, run_id):
     t0 = time.time()
     with open(log, "w") as f:
         f.write("$ " + " ".join(cmd) + "\n"); f.flush()
-        rc = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, cwd=str(REPO)).returncode
+        env = dict(os.environ, PYTHONUNBUFFERED="1")  # so per-game logs stream while the game runs
+        rc = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, cwd=str(REPO), env=env).returncode
     return run_id, rc, time.time() - t0
 
 

@@ -4,3 +4,16 @@
 [25/451] gpt-oss-20b competitive S2 -> ACCEPT (json)
 [groq] rate limited on allam-2-7b; waiting 10.3s
 [groq] rate limited on allam-2-7b; waiting 10.2s
+[groq] rate limited on allam-2-7b; waiting 11.9s
+[groq] rate limited on allam-2-7b; waiting 1.5s
+[groq] rate limited on allam-2-7b; waiting 1.3s
+[groq] rate limited on allam-2-7b; waiting 12.3s
+[50/451] qwen3.8-27b fair S0 -> REFUSE (first_token)
+[groq] rate limited on allam-2-7b; waiting 11.3s
+[groq] rate limited on allam-2-7b; waiting 9.8s
+[groq] rate limited on allam-2-7b; waiting 10.0s
+[groq] rate limited on allam-2-7b; waiting 9.6s
+[groq] rate limited on allam-2-7b; waiting 10.2s
+[75/451] qwen3.8-27b neutral S3 -> REFUSE (json)
+[groq] rate limited on allam-2-7b; waiting 9.6s
+[groq] rate limited on allam-2-7b; waiting 9.5s
