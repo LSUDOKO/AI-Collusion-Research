@@ -142,7 +142,33 @@ def fig5_outcomes():
 
 def make_all():
     fig1_design(); fig2_acceptance(); fig3_scatter(); fig4_predictors(); fig5_outcomes()
+    try:
+        fig2b_claude()
+    except NameError:
+        pass
 
 
 if __name__ == "__main__":
     make_all()
+
+
+def fig2b_claude():
+    p = TABLES / "T2b_acceptance_claude.csv"
+    q = TABLES / "T2_acceptance.csv"
+    if not p.exists() or not q.exists():
+        return
+    acc = pd.concat([pd.read_csv(q), pd.read_csv(p)])
+    g = acc.groupby(["model", "offer"]).apply(lambda x: x.n_accept.sum() / max(x.n_valid.sum(), 1)).unstack()
+    offers = [o for o in ["S0", "S1", "S2", "S3"] if o in g.columns]
+    order = [m for m in ["allam-7b", "qwen3.8-27b", "gpt-oss-20b", "gpt-oss-120b", "claude-haiku", "claude-sonnet"] if m in g.index]
+    g = g.reindex(order)
+    fig, ax = plt.subplots(figsize=(7.2, 2.9))
+    w = 0.8 / len(offers)
+    for k, o in enumerate(offers):
+        ax.bar(np.arange(len(order)) + (k - (len(offers) - 1) / 2) * w, g[o], w, color=OFFER_COL[o], label=o)
+    ax.axvline(len([m for m in order if not m.startswith("claude")]) - 0.5, color="grey", ls="--", lw=1)
+    ax.text(len(order) - 1, 1.04, "Claude (exploratory,\nsubscription CLI)", ha="center", fontsize=7)
+    ax.set_xticks(range(len(order))); ax.set_xticklabels(order, rotation=20, ha="right", fontsize=8)
+    ax.set_ylim(0, 1.12); ax.set_ylabel("Acceptance (pooled over personas)")
+    ax.legend(ncol=4, fontsize=7.5, loc="lower center", bbox_to_anchor=(0.5, -0.42), frameon=False)
+    save(fig, "fig2b_acceptance_all_models.png")

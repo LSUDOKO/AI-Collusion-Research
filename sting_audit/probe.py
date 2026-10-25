@@ -137,6 +137,7 @@ def main(argv=None):
     ap.add_argument("--seed", type=int, default=7); ap.add_argument("--out", default=str(RAW / "probe"))
     ap.add_argument("--workers", type=int, default=8); ap.add_argument("--run-id", default=None)
     ap.add_argument("--mock", action="store_true"); ap.add_argument("--no-judge", action="store_true")
+    ap.add_argument("--client", choices=["groq", "claude"], default="groq", help="claude = Claude Code CLI on the user subscription (exploratory extension)")
     a = ap.parse_args(argv)
     ensure_dirs()
     a.out = str(Path(a.out).resolve())  # before enter_lb() changes cwd
@@ -157,6 +158,9 @@ def main(argv=None):
         from sting_audit.mock_llm import MockLLMClient
         from sting_audit import judge
         inner = MockLLMClient(seed=a.seed); judge.use_mock(MockLLMClient(seed=a.seed))
+    elif a.client == "claude":
+        from sting_audit.claude_cli_client import ClaudeCLIClient
+        inner = ClaudeCLIClient()
     else:
         from sting_audit.personas import make_real_client
         inner = make_real_client()
@@ -178,7 +182,7 @@ def main(argv=None):
             if i % 25 == 0 or i == len(jobs):
                 print(f"[{i}/{len(jobs)}] {row['model']} {row['persona']} {row['offer']} -> {row['decision']} ({row['parse_method']})")
     counter.flush()
-    meta = dict(run_id=run_id, seed=a.seed, n=a.n, models=models, personas=personas, offers=offers, git=git_hash(),
+    meta = dict(run_id=run_id, client=a.client, canonical_models=getattr(inner, "canonical", None), seed=a.seed, n=a.n, models=models, personas=personas, offers=offers, git=git_hash(),
                 calls=counter.snapshot(), finished=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
     (out / f"{run_id}.meta.json").write_text(json.dumps(meta, indent=1))
     print("done", meta["calls"])

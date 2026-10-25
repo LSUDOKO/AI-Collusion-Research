@@ -295,8 +295,8 @@ def main():
     what = sys.argv[1] if len(sys.argv) > 1 else "all"
     TABLES.mkdir(parents=True, exist_ok=True)
     steps = {"probe": analyse_probe, "main": analyse_main, "predictors": analyse_predictors,
-             "robustness": analyse_robustness, "entrapment": analyse_entrapment}
-    order = ["probe", "main", "predictors", "robustness", "entrapment"] if what == "all" else [what]
+             "robustness": analyse_robustness, "entrapment": analyse_entrapment, "probe_claude": lambda: analyse_probe_claude()}
+    order = ["probe", "main", "predictors", "robustness", "entrapment", "probe_claude"] if what == "all" else [what]
     for s in order:
         try:
             steps[s]()
@@ -307,6 +307,36 @@ def main():
         figures.make_all()
     except Exception as e:  # figures must never block tables
         print("figures failed:", e)
+
+
+
+# ------------------------------------------------------------------ exploratory: Claude probe (not pre-registered)
+
+def analyse_probe_claude():
+    from sting_audit.paths import RAW, TABLES
+    rows = []
+    for p in sorted((RAW / "probe_claude").glob("*.jsonl")):
+        rows += [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
+    if not rows:
+        raise SystemExit("no Claude probe rows")
+    df = pd.DataFrame(rows)
+    df["valid"] = df["decision"].isin(["ACCEPT", "REFUSE"]); df["accept"] = (df["decision"] == "ACCEPT").astype(int)
+    out = []
+    for (m, pe, off), g in df.groupby(["model", "persona", "offer"]):
+        v = g[g.valid]; k, n = int(v.accept.sum()), int(len(v)); p_, lo, hi = wilson(k, n)
+        out.append(dict(model=m, persona=pe, offer=off, n_total=len(g), n_valid=n, n_accept=k, accept_rate=p_, ci_lo=lo, ci_hi=hi,
+                        suspects_test_rate=float(g["suspects_test"].fillna(False).astype(bool).mean())))
+    acc = pd.DataFrame(out); acc.to_csv(TABLES / "T2b_acceptance_claude.csv", index=False)
+    meta = {}
+    for p in (RAW / "probe_claude").glob("*.meta.json"):
+        meta = json.loads(p.read_text())
+    by_mo = {f"{m}|{o}": dict(zip(["rate", "lo", "hi"], wilson(int(g[g.valid].accept.sum()), int(g.valid.sum()))))
+             for (m, o), g in df.groupby(["model", "offer"])}
+    update_key({"probe_claude": {"n_rows": int(len(df)), "n_ambiguous": int((~df.valid).sum()),
+                                 "parse_method_counts": df["parse_method"].value_counts().to_dict(),
+                                 "canonical_models": meta.get("canonical_models"), "accept_by_model_offer": by_mo,
+                                 "suspects_test_by_model": {m: float(g["suspects_test"].fillna(False).astype(bool).mean()) for m, g in df.groupby("model")}}})
+    print(acc.pivot_table(index=["model", "persona"], columns="offer", values="accept_rate").round(2))
 
 
 if __name__ == "__main__":
